@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mexi’Fuego est un projet de food truck de street-food mexicaine à Toulouse, associant cuisine personnalisable, défis participatifs et innovation autour des emballages alimentaires comestibles.">
-  <title>Mexi’Fuego | Street-food mexicaine</title>
+  <meta name="description" content="Présentation du projet Mexi’Fuego : food truck de street-food mexicaine à Toulouse, personnalisation du piment, animation participative et recherche sur les contenants comestibles.">
+  <title>Mexi’Fuego — Présentation du projet</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,18 +47,13 @@
       text-decoration: none;
     }
 
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
     .container {
       width: min(90%, var(--max-width));
       margin: auto;
     }
 
     .section {
-      padding: 90px 0;
+      padding: 85px 0;
     }
 
     .section-label {
@@ -77,17 +72,17 @@
     }
 
     h1 {
-      font-size: clamp(3rem, 8vw, 6.5rem);
-      letter-spacing: -1px;
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      margin-bottom: 25px;
     }
 
     h2 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-size: clamp(2.2rem, 5vw, 3.7rem);
       margin-bottom: 22px;
     }
 
     h3 {
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       margin-bottom: 12px;
     }
 
@@ -96,7 +91,7 @@
     }
 
     .section-intro {
-      max-width: 760px;
+      max-width: 790px;
       color: var(--grey);
       font-size: 1.05rem;
       margin-bottom: 40px;
@@ -106,15 +101,11 @@
       color: var(--orange);
     }
 
-    .text-green {
-      color: var(--green);
-    }
-
     .btn {
       display: inline-block;
       border: 2px solid var(--orange);
       border-radius: 5px;
-      padding: 13px 23px;
+      padding: 12px 22px;
       font-weight: 900;
       transition: 0.2s ease;
     }
@@ -151,11 +142,11 @@
     }
 
     .nav-inner {
-      min-height: 76px;
+      min-height: 75px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 25px;
+      gap: 22px;
     }
 
     .logo {
@@ -171,12 +162,12 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 23px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     .nav-links a {
-      font-size: 0.87rem;
+      font-size: 0.85rem;
       font-weight: 800;
     }
 
@@ -184,7 +175,7 @@
       color: var(--orange);
     }
 
-    /* Hero */
+    /* Présentation */
 
     .hero {
       padding: 85px 0 75px;
@@ -200,14 +191,10 @@
       align-items: center;
     }
 
-    .hero h1 {
-      margin-bottom: 25px;
-    }
-
     .hero-description {
       max-width: 650px;
       color: var(--grey);
-      font-size: 1.15rem;
+      font-size: 1.13rem;
       margin-bottom: 28px;
     }
 
@@ -215,7 +202,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 13px;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .hero-facts {
@@ -225,7 +212,7 @@
     }
 
     .fact {
-      padding: 8px 13px;
+      padding: 8px 12px;
       background: var(--white);
       border: 1px solid var(--light-grey);
       border-radius: 4px;
@@ -235,7 +222,7 @@
 
     .hero-art {
       position: relative;
-      min-height: 410px;
+      min-height: 400px;
       background: var(--orange);
       border-radius: 48% 48% 8px 8px;
       display: flex;
@@ -270,37 +257,26 @@
       transform: rotate(-15deg);
     }
 
-    .hero-sticker {
-      position: absolute;
-      z-index: 2;
-      bottom: 32px;
-      right: 25px;
-      background: var(--lime);
-      color: var(--dark-green);
-      border-radius: 50%;
-      width: 112px;
-      height: 112px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-weight: 900;
-      line-height: 1.2;
-      transform: rotate(10deg);
-    }
-
     /* Concept */
 
     .concept-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 45px;
+      gap: 40px;
       align-items: start;
     }
 
     .concept-copy {
       color: var(--grey);
+    }
+
+    .concept-copy h3 {
+      color: var(--dark-green);
+      margin-top: 25px;
+    }
+
+    .concept-copy h3:first-child {
+      margin-top: 0;
     }
 
     .concept-copy strong {
@@ -319,7 +295,7 @@
     }
 
     .concept-item h3 {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
     }
 
     .concept-item p {
@@ -327,7 +303,7 @@
       margin-bottom: 0;
     }
 
-    /* Positioning */
+    /* Positionnement */
 
     .positioning {
       background: var(--dark-green);
@@ -362,7 +338,7 @@
       margin-bottom: 0;
     }
 
-    /* Menu */
+    /* Carte */
 
     .menu-grid {
       display: grid;
@@ -375,8 +351,6 @@
       border: 1px solid var(--light-grey);
       padding: 26px;
       border-radius: 5px;
-      display: flex;
-      flex-direction: column;
     }
 
     .menu-icon {
@@ -414,9 +388,10 @@
       letter-spacing: 1.5px;
       font-weight: 900;
       margin-bottom: 10px;
+      display: block;
     }
 
-    .menu-note {
+    .note {
       margin-top: 25px;
       padding: 20px;
       background: #F3EFD9;
@@ -424,7 +399,11 @@
       color: var(--grey);
     }
 
-    /* Spice levels */
+    .note strong {
+      color: var(--dark-green);
+    }
+
+    /* Piment */
 
     .spice-section {
       background: #F3EFD9;
@@ -501,7 +480,7 @@
 
     .innovation-lead {
       max-width: 850px;
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       color: var(--grey);
       margin-bottom: 45px;
     }
@@ -518,7 +497,7 @@
     }
 
     .innovation-visual {
-      min-height: 340px;
+      min-height: 330px;
       padding: 30px;
       background: var(--lime);
       border-radius: 5px;
@@ -556,11 +535,16 @@
       margin-bottom: 10px;
     }
 
+    .innovation-subtitle {
+      margin-top: 45px;
+      margin-bottom: 15px;
+    }
+
     .innovation-steps {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin: 35px 0 45px;
+      margin: 30px 0 40px;
     }
 
     .innovation-step {
@@ -578,7 +562,7 @@
     }
 
     .innovation-step h3 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
 
     .innovation-step p {
@@ -732,7 +716,7 @@
       color: var(--lime);
     }
 
-    /* Audience */
+    /* Public */
 
     .audience-grid {
       display: grid;
@@ -756,7 +740,7 @@
       margin-bottom: 0;
     }
 
-    /* Development */
+    /* Développement */
 
     .development {
       background: #F3EFD9;
@@ -799,6 +783,7 @@
       padding: 30px;
       background: var(--white);
       border-top: 5px solid var(--green);
+      margin-top: 30px;
     }
 
     .development-box p {
@@ -823,7 +808,7 @@
       flex-wrap: wrap;
     }
 
-    /* Footer */
+    /* Pied de page */
 
     footer {
       padding: 30px 0;
@@ -849,7 +834,7 @@
       color: var(--lime);
     }
 
-    /* Responsive */
+    /* Adaptation mobile */
 
     @media (max-width: 900px) {
       .nav-inner {
@@ -898,7 +883,7 @@
 
     @media (max-width: 560px) {
       .section {
-        padding: 65px 0;
+        padding: 60px 0;
       }
 
       .menu-grid,
@@ -923,12 +908,6 @@
         min-height: 260px;
       }
 
-      .hero-sticker {
-        width: 90px;
-        height: 90px;
-        font-size: 0.85rem;
-      }
-
       .materials,
       .challenge-box {
         padding: 22px;
@@ -948,21 +927,22 @@
       </a>
 
       <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#concept">Notre concept</a>
-        <a href="#positionnement">Notre approche</a>
-        <a href="#carte">Notre carte</a>
-        <a href="#piment">Niveaux piquants</a>
-        <a href="#innovation">Notre innovation</a>
-        <a href="#animation">Animation participative</a>
-        <a href="#public">Public cible</a>
-        <a href="#contact">Nous contacter</a>
+        <a href="#concept">Le concept</a>
+        <a href="#positionnement">Le positionnement</a>
+        <a href="#carte">La carte</a>
+        <a href="#piment">Le piment</a>
+        <a href="#innovation">L’innovation</a>
+        <a href="#animation">Les animations</a>
+        <a href="#public">Le public</a>
+        <a href="#developpement">Le développement</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
 
-    <!-- Accueil -->
+    <!-- Présentation -->
 
     <section class="hero" id="accueil">
       <div class="container hero-grid">
@@ -972,37 +952,31 @@
 
           <h1>Mexi<span class="text-orange">’</span>Fuego</h1>
 
-          <h2>Street-food mexicaine personnalisable</h2>
+          <h2>Street-food mexicaine</h2>
 
           <p class="hero-description">
             Mexi’Fuego est un projet de food truck inspiré de la cuisine de rue
-            mexicaine. Le concept associe une offre de tacos, burritos et nachos,
-            plusieurs niveaux de piment et des animations qui invitent les clients
-            à participer. Le projet développe également une piste d’innovation :
-            des contenants alimentaires comestibles à base de matières premières
-            d’origine végétale.
+            mexicaine. Il associe une carte de tacos, burritos et nachos, plusieurs
+            niveaux de piment et des animations participatives. Le projet explore
+            également une innovation : la conception d'une barquette alimentaire
+            comestible à base d'ingrédients d'origine végétale.
           </p>
 
           <div class="hero-actions">
-            <a href="#concept" class="btn btn-primary">Découvrir le concept</a>
-            <a href="#innovation" class="btn btn-secondary">Comprendre l’innovation</a>
+            <a href="#concept" class="btn btn-primary">Présentation</a>
+            <a href="#innovation" class="btn btn-secondary">Innovation</a>
           </div>
 
           <div class="hero-facts">
             <span class="fact">📍 Toulouse</span>
             <span class="fact">🌮 Cuisine mexicaine</span>
             <span class="fact">🌶️ Piment personnalisable</span>
-            <span class="fact">♻️ Réflexion sur les déchets</span>
+            <span class="fact">♻️ Contenant comestible à l’étude</span>
           </div>
         </div>
 
         <div class="hero-art" aria-label="Illustration d'un piment">
           <div class="hero-pepper" aria-hidden="true">🌶️</div>
-          <div class="hero-sticker">
-            <span>CHOISIS</span>
-            <span>TON</span>
-            <span>FUEGO !</span>
-          </div>
         </div>
 
       </div>
@@ -1013,48 +987,49 @@
     <section class="section" id="concept">
       <div class="container">
 
-        <p class="section-label">Présentation du projet</p>
-        <h2>Notre concept</h2>
+        <p class="section-label">Présentation générale</p>
+        <h2>Le concept</h2>
 
         <p class="section-intro">
-          Mexi’Fuego ne repose pas uniquement sur la vente de repas. Le projet
-          cherche à associer une offre de restauration accessible à une expérience
-          originale, dans laquelle chaque client peut personnaliser son plat et,
-          s’il le souhaite, participer à des défis autour de la cuisine et du piment.
+          Mexi’Fuego associe une activité de restauration rapide à une expérience
+          interactive. Le projet repose sur trois composantes : une offre de
+          street-food mexicaine, une personnalisation du niveau de piment et
+          des animations conçues pour créer des échanges avec les clients.
         </p>
 
         <div class="concept-grid">
 
           <div class="concept-copy">
-            <h3>Une cuisine <span class="text-orange">accessible</span></h3>
+            <h3>La restauration</h3>
 
             <p>
-              La carte s’inspire de la street-food mexicaine et propose des recettes
-              connues du grand public, comme les tacos, les burritos et les nachos.
-              Les plats sont pensés pour être consommés facilement, notamment lors
-              des pauses déjeuner, des sorties entre amis et des événements.
+              La carte envisagée comprend des tacos, des burritos, des nachos et
+              différents accompagnements. Les recettes sont pensées pour être
+              faciles à consommer et adaptées à la vente à emporter.
             </p>
 
             <p>
-              L’objectif est de proposer une offre gourmande et identifiable, avec
-              des recettes composées de plusieurs ingrédients et des sauces qui
-              permettent de faire varier les saveurs et l’intensité du piment.
+              Les clients pourront choisir leur recette et, selon les possibilités
+              de préparation, le niveau de piment associé. L'objectif est de proposer
+              une offre identifiable, gourmande et modulable.
             </p>
 
-            <h3>Une expérience <span class="text-orange">participative</span></h3>
+            <h3>L’expérience client</h3>
 
             <p>
-              Le client ne choisit pas seulement un plat : il peut aussi sélectionner
-              son niveau de piment et découvrir les animations proposées par le food
-              truck. Le Fuego Challenge doit notamment permettre de créer des
-              interactions entre les participants et de produire des contenus
-              partageables sur les réseaux sociaux, avec leur accord.
+              Le Fuego Challenge complète la vente de repas par des jeux, des
+              questions et des défis facultatifs. Cette animation doit favoriser
+              les échanges entre les participants et rendre le food truck attractif
+              lors d'événements.
             </p>
 
+            <h3>La recherche</h3>
+
             <p>
-              Cette dimension événementielle constitue un élément distinctif du
-              projet. Elle permet d'envisager une présence dans différents lieux,
-              au-delà de la restauration classique.
+              Le projet comprend une réflexion sur les emballages alimentaires.
+              L'équipe souhaite étudier la faisabilité d'une barquette comestible
+              qui pourrait accompagner certains plats et limiter, sous conditions,
+              le recours à des contenants classiques.
             </p>
           </div>
 
@@ -1064,31 +1039,31 @@
               <h3>Une carte modulable</h3>
               <p>
                 Des recettes de street-food accompagnées de sauces et de niveaux
-                de piment différents, pour laisser une place aux préférences de chacun.
+                de piment différents.
               </p>
             </article>
 
             <article class="concept-item">
-              <h3>Des défis collectifs</h3>
+              <h3>Des jeux collectifs</h3>
               <p>
-                Une roue de la fortune, des questions et des défis facultatifs pour
-                favoriser la convivialité et faire participer les clients.
+                Une roue de la fortune, des questions sur le Mexique et des défis
+                facultatifs pour les clients.
               </p>
             </article>
 
             <article class="concept-item">
-              <h3>Une démarche innovante</h3>
+              <h3>Un contenant comestible</h3>
               <p>
-                Une réflexion sur des contenants comestibles et la valorisation
-                éventuelle de certaines matières premières végétales.
+                Un prototype à développer et à tester pour évaluer sa résistance,
+                sa sécurité alimentaire et sa faisabilité.
               </p>
             </article>
 
             <article class="concept-item">
-              <h3>Une implantation locale</h3>
+              <h3>Une implantation toulousaine</h3>
               <p>
-                Toulouse est le territoire envisagé pour rencontrer un public jeune,
-                des étudiants, des associations et les organisateurs d'événements.
+                Un territoire envisagé pour rencontrer des étudiants, des jeunes
+                actifs, des associations et des organisateurs d'événements.
               </p>
             </article>
 
@@ -1103,13 +1078,13 @@
       <div class="container">
 
         <p class="section-label">Identité du projet</p>
-        <h2>Notre approche</h2>
+        <h2>Le positionnement</h2>
 
         <p class="section-intro">
-          Le positionnement de Mexi’Fuego combine trois dimensions complémentaires :
-          la restauration, l'animation et l'expérimentation. Cette association doit
-          permettre au projet de se différencier d'un food truck qui proposerait
-          uniquement une carte de plats à emporter.
+          Le positionnement de Mexi’Fuego se situe à la croisée de la restauration,
+          du divertissement et de l'expérimentation. L'objectif est de proposer
+          davantage qu'un repas à emporter, en intégrant une expérience personnalisable
+          et une animation adaptée aux lieux fréquentés.
         </p>
 
         <div class="position-grid">
@@ -1118,9 +1093,8 @@
             <div class="position-number">01</div>
             <h3>La gourmandise</h3>
             <p>
-              Proposer des recettes inspirées de la street-food mexicaine, avec des
-              ingrédients identifiables, des associations de saveurs et plusieurs
-              possibilités de personnalisation.
+              Des recettes inspirées de la street-food mexicaine, avec des ingrédients
+              identifiables et plusieurs possibilités d'assaisonnement.
             </p>
           </article>
 
@@ -1128,18 +1102,17 @@
             <div class="position-number">02</div>
             <h3>La convivialité</h3>
             <p>
-              Faire du repas un moment d'échange grâce aux défis, aux jeux et aux
-              expériences partagées entre amis, collègues ou participants d'un événement.
+              Des jeux et des défis facultatifs pour favoriser les échanges entre
+              amis, collègues et participants d'un événement.
             </p>
           </article>
 
           <article class="position-card">
             <div class="position-number">03</div>
-            <h3>L'expérimentation</h3>
+            <h3>L’innovation</h3>
             <p>
-              Tester de nouvelles façons de consommer la street-food, notamment
-              à travers le développement d'un contenant comestible, sans présenter
-              le prototype comme une solution déjà validée.
+              Une démarche d'expérimentation autour des contenants comestibles,
+              dont la faisabilité et les bénéfices restent à démontrer.
             </p>
           </article>
 
@@ -1153,13 +1126,13 @@
       <div class="container">
 
         <p class="section-label">Offre de restauration</p>
-        <h2>Notre carte</h2>
+        <h2>La carte</h2>
 
         <p class="section-intro">
           La carte envisagée met en avant des plats inspirés de la cuisine de rue
-          mexicaine. Les prix ci-dessous correspondent aux prix de travail du projet :
-          ils pourront évoluer selon les coûts d'approvisionnement, les portions,
-          les tests de recettes et le positionnement commercial final.
+          mexicaine. Les prix correspondent aux hypothèses de travail du projet.
+          Ils devront être confirmés après calcul des coûts d'approvisionnement,
+          des portions et des marges.
         </p>
 
         <div class="menu-grid">
@@ -1171,7 +1144,7 @@
             <div class="menu-price">11 €</div>
             <p>
               Poulet mariné, cheddar, pico de gallo, coriandre et sauce chipotle.
-              Une recette pensée pour associer fraîcheur, gourmandise et notes fumées.
+              Une recette associant fraîcheur et notes fumées.
             </p>
           </article>
 
@@ -1181,9 +1154,8 @@
             <h3>El Beef</h3>
             <div class="menu-price">12 €</div>
             <p>
-              Bœuf effiloché, oignons rouges, cheddar et jalapeños.
-              Une recette généreuse qui peut être accompagnée d'une sauce
-              choisie selon le niveau de piment souhaité.
+              Bœuf effiloché, oignons rouges, cheddar et jalapeños, avec une
+              sauce à sélectionner selon le niveau de piment souhaité.
             </p>
           </article>
 
@@ -1194,8 +1166,6 @@
             <div class="menu-price">12 €</div>
             <p>
               Poulet croustillant, guacamole, chou rouge et jalapeños frits.
-              Le contraste entre le croustillant et les ingrédients frais
-              participe à l'identité de la recette.
             </p>
           </article>
 
@@ -1206,7 +1176,7 @@
             <div class="menu-price">12 €</div>
             <p>
               Riz, haricots rouges, bœuf haché, cheddar, guacamole, pico de gallo
-              et sauce picante. Un format complet adapté à un repas sur le pouce.
+              et sauce picante.
             </p>
           </article>
 
@@ -1217,8 +1187,7 @@
             <div class="menu-price">10 €</div>
             <p>
               Chips de maïs, fromage fondu, guacamole, pico de gallo, jalapeños
-              et sauce au choix. Une recette qui peut convenir à une consommation
-              individuelle ou au partage.
+              et sauce au choix.
             </p>
           </article>
 
@@ -1228,19 +1197,17 @@
             <h3>Sauces maison</h3>
             <div class="menu-price">À définir</div>
             <p>
-              Une sélection de sauces et de guacamole pour adapter les saveurs
-              et l'intensité du piment. Les recettes définitives, les portions
-              et les tarifs restent à préciser.
+              Une sélection de sauces et de guacamole pour varier les saveurs
+              et adapter l'intensité du piment.
             </p>
           </article>
 
         </div>
 
-        <div class="menu-note">
-          <strong>Personnalisation :</strong>
-          le niveau de piment doit pouvoir être choisi indépendamment de la recette,
-          dans la mesure où les préparations et l'organisation de la cuisine le permettent.
-          Les allergènes devront être identifiés et communiqués aux clients.
+        <div class="note">
+          <strong>Informations alimentaires :</strong>
+          les recettes définitives, les allergènes, les portions et les tarifs
+          devront être précisés avant la commercialisation.
         </div>
 
       </div>
@@ -1252,20 +1219,20 @@
       <div class="container">
 
         <p class="section-label">Personnalisation des recettes</p>
-        <h2>Niveaux piquants</h2>
+        <h2>Le piment</h2>
 
         <p class="section-intro">
-          Le piment constitue un élément central de l'identité de Mexi’Fuego.
-          Quatre niveaux sont envisagés pour permettre à chacun de choisir son
-          intensité. Les niveaux devront être testés et standardisés pour que
-          les clients puissent comprendre ce qu'ils commandent.
+          Quatre niveaux sont envisagés pour permettre aux clients de choisir
+          l'intensité de leur plat. Les recettes et les dosages devront être
+          testés afin que les niveaux proposés soient cohérents et clairement
+          compréhensibles.
         </p>
 
         <div class="spice-grid">
 
           <article class="spice-card">
             <div class="spice-level">Tranquilo</div>
-            <p>Une intensité douce, pensée pour découvrir les recettes sans rechercher une forte sensation de piquant.</p>
+            <p>Un niveau doux, adapté aux personnes qui souhaitent limiter la sensation de piquant.</p>
             <div class="spice-meter">
               <span></span><span></span><span></span><span></span>
             </div>
@@ -1274,7 +1241,7 @@
 
           <article class="spice-card">
             <div class="spice-level">Caliente</div>
-            <p>Un niveau intermédiaire qui apporte une sensation de chaleur tout en laissant les saveurs du plat s'exprimer.</p>
+            <p>Une intensité intermédiaire qui apporte de la chaleur tout en laissant les saveurs s'exprimer.</p>
             <div class="spice-meter">
               <span></span><span></span><span></span><span></span>
             </div>
@@ -1283,7 +1250,7 @@
 
           <article class="spice-card">
             <div class="spice-level">Fuego</div>
-            <p>Une intensité élevée destinée aux personnes qui apprécient réellement les préparations pimentées.</p>
+            <p>Un niveau élevé destiné aux personnes qui apprécient les préparations pimentées.</p>
             <div class="spice-meter">
               <span></span><span></span><span></span><span></span>
             </div>
@@ -1292,7 +1259,7 @@
 
           <article class="spice-card">
             <div class="spice-level">Diablo</div>
-            <p>Le niveau le plus fort de la gamme. Il doit être proposé avec une information claire sur son intensité.</p>
+            <p>Le niveau le plus fort de la gamme, avec une information claire sur son intensité.</p>
             <div class="spice-meter">
               <span></span><span></span><span></span><span></span>
             </div>
@@ -1301,12 +1268,11 @@
 
         </div>
 
-        <div class="menu-note">
-          <strong>Point de vigilance :</strong>
-          les niveaux sont des catégories de travail, pas des mesures scientifiques
-          de piquant. Les recettes, les dosages et les informations destinées aux clients
-          devront être validés avant la commercialisation. Aucun défi ne doit obliger
-          une personne à consommer un produit très pimenté.
+        <div class="note">
+          <strong>Précaution :</strong>
+          ces catégories ne sont pas des mesures scientifiques du piquant.
+          Les dosages devront être validés avant le lancement. Aucun participant
+          ne devra être obligé de consommer un produit très pimenté.
         </div>
 
       </div>
@@ -1318,69 +1284,70 @@
       <div class="container">
 
         <p class="section-label">Développement de produit</p>
-        <h2>Notre innovation</h2>
+        <h2>L’innovation</h2>
 
         <p class="innovation-lead">
-          L'innovation envisagée par Mexi’Fuego porte sur le <strong>développement
-          d'une barquette alimentaire comestible</strong>, pensée pour accompagner
-          les plats servis dans un food truck. L'objectif est d'explorer une solution
-          qui associe praticité, expérience client et réduction potentielle des
-          emballages à usage unique.
+          Mexi’Fuego étudie la possibilité de concevoir une
+          <strong>barquette alimentaire comestible</strong> pour accompagner certains
+          plats. L'objectif est de créer un contenant qui participe à l'expérience
+          de consommation et d'explorer une alternative aux emballages à usage unique.
+          La pertinence environnementale et la faisabilité technique restent à vérifier.
         </p>
 
         <div class="innovation-highlight">
 
           <div class="innovation-visual">
             <div class="bowl" aria-hidden="true">🥣</div>
-            <h3>Une barquette comestible</h3>
+            <h3>La barquette</h3>
             <p>
-              Un contenant à base d'ingrédients d'origine végétale, imaginé pour
-              être utilisé avec certains plats de street-food.
+              Un contenant à base d'ingrédients végétaux, conçu pour être manipulé
+              et potentiellement consommé avec le repas.
             </p>
           </div>
 
           <div class="innovation-copy">
-            <h3>Le problème ciblé</h3>
+            <h3>Le besoin</h3>
 
             <p>
               La vente à emporter nécessite des contenants capables de transporter
-              les aliments, de résister à leur poids et de conserver leur tenue
-              pendant le transport et la consommation. Ces usages génèrent des
-              emballages qui doivent ensuite être collectés et traités.
+              les aliments et de résister à leur poids, à la chaleur et à l'humidité.
+              Ces usages impliquent le recours à des emballages qui doivent ensuite
+              être collectés et traités.
             </p>
 
             <p>
-              Mexi’Fuego souhaite étudier une autre approche : concevoir un contenant
-              qui fasse partie de l'expérience alimentaire et qui puisse, sous réserve
-              de validation, être consommé avec le repas ou séparément.
+              Le projet consiste à étudier un contenant comestible pouvant remplir
+              une fonction pratique tout en ajoutant une dimension originale au repas.
+              Sa consommation éventuelle devra être compatible avec les ingrédients
+              utilisés et avec les exigences de sécurité alimentaire.
             </p>
 
-            <h3>La valeur créée</h3>
+            <h3>La valeur</h3>
 
             <p>
-              Pour le client, le contenant pourrait devenir un élément original
-              de l'expérience. Pour l'entreprise, il pourrait renforcer la
-              différenciation du food truck. Sur le plan environnemental, son intérêt
-              dépendra toutefois de sa composition, de sa fabrication, de sa conservation,
-              de son transport et de son usage réel.
+              Pour les clients, le contenant pourrait représenter une expérience
+              différente. Pour le food truck, il pourrait constituer un élément de
+              différenciation. Pour l'environnement, son intérêt dépendra notamment
+              de sa fabrication, de sa composition, de sa conservation et de son
+              mode d'utilisation.
             </p>
 
             <p>
-              Une barquette comestible n'est donc pas automatiquement plus écologique
-              qu'un emballage classique : cette hypothèse doit être évaluée avec des
-              données et des comparaisons adaptées.
+              Un emballage comestible n'est pas automatiquement plus écologique :
+              cette hypothèse doit être comparée à des solutions existantes à partir
+              de données fiables.
             </p>
           </div>
 
         </div>
 
-        <h3>Composition envisagée</h3>
+        <h3 class="innovation-subtitle">Les matériaux</h3>
 
         <p class="section-intro">
-          Une première piste de formulation repose sur des ingrédients secs pouvant
-          former une pâte moulable après ajout d'eau. Les proportions ci-dessous
-          constituent uniquement une base exploratoire pour réaliser des essais ;
-          elles ne correspondent pas à une recette validée pour un usage alimentaire.
+          Une première hypothèse de formulation associe des ingrédients secs
+          et de l'eau pour former une pâte moulable. Les proportions ci-dessous
+          servent uniquement de point de départ pour des essais et ne constituent
+          pas une recette validée.
         </p>
 
         <div class="material-grid">
@@ -1388,93 +1355,93 @@
           <div class="material-item">
             <strong>50 % — Farine de maïs</strong>
             <span>
-              Base végétale envisagée pour structurer le contenant et apporter
-              une saveur compatible avec l'univers mexicain.
+              Base végétale à tester pour structurer le contenant et apporter
+              une saveur adaptée à l'univers du projet.
             </span>
           </div>
 
           <div class="material-item">
             <strong>30 % — Amidon de maïs</strong>
             <span>
-              Ingrédient à tester pour contribuer à la cohésion de la pâte
-              et à la tenue du contenant après cuisson.
+              Ingrédient à évaluer pour sa contribution à la cohésion et à la tenue
+              de la pâte après cuisson.
             </span>
           </div>
 
           <div class="material-item">
             <strong>20 % — Amidon de tapioca</strong>
             <span>
-              Piste de formulation à évaluer pour ses propriétés de liaison
-              et son effet sur la texture finale.
+              Ingrédient à tester pour ses propriétés de liaison et son effet
+              sur la texture du contenant.
             </span>
           </div>
 
         </div>
 
         <div class="innovation-warning">
-          <strong>Précision sur la formulation :</strong>
-          ces pourcentages représentent des proportions de matières sèches dans
-          une hypothèse de départ, et non une composition certifiée. L'eau, les
-          assaisonnements et les éventuels ingrédients complémentaires devront
-          être définis par essais. La résistance à l'humidité, à la chaleur, aux
-          sauces et au poids des aliments reste à démontrer.
+          <strong>Formulation provisoire :</strong>
+          les pourcentages correspondent à une hypothèse de proportions de matières
+          sèches. La quantité d'eau, les assaisonnements et les paramètres de cuisson
+          devront être déterminés par essais. La résistance aux sauces, à l'humidité,
+          à la chaleur et au poids des aliments reste à démontrer.
         </div>
 
-        <h3 style="margin-top: 50px;">Valorisation envisagée</h3>
+        <h3 class="innovation-subtitle">Le réemploi</h3>
 
         <p class="section-intro">
-          Une seconde piste consiste à étudier l'intégration de certaines matières
-          végétales issues de la préparation des aliments. Cette démarche pourrait
-          être pertinente si les matières retenues sont propres à l'usage alimentaire,
-          traçables, disponibles en quantité suffisante et compatibles avec la formulation.
+          Le projet peut également étudier la valorisation de certaines matières
+          végétales issues de la préparation des aliments, à condition qu'elles
+          soient propres à l'usage alimentaire, traçables et adaptées à la formulation.
+          Leur intégration ne pourra être envisagée qu'après vérification de leur
+          qualité sanitaire et de leur disponibilité.
         </p>
 
         <div class="innovation-steps">
 
           <article class="innovation-step">
             <span class="step-number">01</span>
-            <h3>Identifier les matières</h3>
+            <h3>Identifier</h3>
             <p>
-              Recenser les ingrédients et les éventuels sous-produits propres
-              issus de la préparation, par exemple certaines parures végétales.
+              Repérer les ingrédients et les sous-produits végétaux propres qui
+              pourraient être compatibles avec la recette.
             </p>
           </article>
 
           <article class="innovation-step">
             <span class="step-number">02</span>
-            <h3>Préparer les ingrédients</h3>
+            <h3>Préparer</h3>
             <p>
               Étudier les méthodes de préparation, de séchage et de réduction
-              en poudre, dans le respect des exigences d'hygiène et de traçabilité.
+              en poudre dans le respect des règles d'hygiène.
             </p>
           </article>
 
           <article class="innovation-step">
             <span class="step-number">03</span>
-            <h3>Former le contenant</h3>
+            <h3>Prototyper</h3>
             <p>
               Tester différentes formulations, des moules et des paramètres
-              de cuisson pour obtenir une forme stable et manipulable.
+              de cuisson pour obtenir une forme stable.
             </p>
           </article>
 
           <article class="innovation-step">
             <span class="step-number">04</span>
-            <h3>Évaluer le prototype</h3>
+            <h3>Évaluer</h3>
             <p>
-              Mesurer la résistance, la tenue à l'humidité, le goût, la texture,
-              la conservation et l'aptitude au contact alimentaire.
+              Mesurer la résistance, le goût, la texture, la conservation et
+              l'aptitude au contact alimentaire.
             </p>
           </article>
 
         </div>
 
         <div class="materials">
-          <h3>Critères de validation</h3>
+          <h3>Les critères</h3>
           <p>
-            La réussite du projet ne dépend pas uniquement de la fabrication
-            d'une forme comestible. Le contenant doit répondre à des exigences
-            pratiques, sanitaires et économiques avant toute mise en vente.
+            La réussite de l'innovation ne se limite pas à fabriquer une forme
+            comestible. Le contenant devra répondre à des exigences techniques,
+            sanitaires et économiques avant d'être envisagé pour la vente.
           </p>
 
           <div class="material-grid">
@@ -1488,18 +1455,18 @@
             </div>
 
             <div class="material-item">
-              <strong>Sécurité alimentaire</strong>
+              <strong>Sécurité</strong>
               <span>
                 Contrôler l'hygiène, la traçabilité, les allergènes, la conservation
-                et la conformité aux règles applicables.
+                et la conformité aux règles alimentaires applicables.
               </span>
             </div>
 
             <div class="material-item">
-              <strong>Faisabilité économique</strong>
+              <strong>Coût</strong>
               <span>
-                Évaluer le coût des ingrédients, le temps de fabrication,
-                la capacité de production et la régularité du résultat.
+                Évaluer le coût des matières premières, le temps de fabrication
+                et la capacité de production.
               </span>
             </div>
 
@@ -1507,13 +1474,13 @@
         </div>
 
         <div class="innovation-warning">
-          <strong>État d'avancement :</strong>
-          la barquette comestible est une piste d'innovation en cours de réflexion
-          et de développement. Son efficacité, sa faisabilité technique, sa sécurité
-          alimentaire et son bénéfice environnemental ne sont pas encore démontrés.
-          Toute commercialisation nécessitera des essais documentés et une validation
-          adaptée. Les déchets de table, les aliments souillés et les matières altérées
-          ne doivent pas être réutilisés dans une préparation alimentaire.
+          <strong>État du projet :</strong>
+          la barquette comestible est une piste de développement. Sa faisabilité
+          technique, sa sécurité alimentaire et son bénéfice environnemental ne sont
+          pas encore démontrés. Des essais documentés et une validation adaptée seront
+          nécessaires avant toute commercialisation. Les déchets de table, les aliments
+          souillés et les matières altérées ne doivent pas être réutilisés dans une
+          préparation alimentaire.
         </div>
 
       </div>
@@ -1525,33 +1492,31 @@
       <div class="container">
 
         <p class="section-label">Expérience client</p>
-        <h2>Animation participative</h2>
+        <h2>Les animations</h2>
 
         <p class="section-intro">
-          Le Fuego Challenge est le dispositif d'animation imaginé pour donner
-          une dimension événementielle à Mexi’Fuego. Il repose sur une roue de
-          la fortune et des défis facultatifs autour de la culture mexicaine,
-          de la cuisine et du piment.
+          Le Fuego Challenge est une animation imaginée pour accompagner la vente
+          de street-food. Il repose sur une roue de la fortune et des activités
+          facultatives autour de la culture mexicaine, de la cuisine et du piment.
         </p>
 
         <div class="animation-grid">
 
           <div class="challenge-box">
-            <h3>Principe du défi</h3>
+            <h3>Le fonctionnement</h3>
 
             <p>
-              Un participant peut faire tourner une roue pour découvrir une
-              catégorie de jeu. Selon le format retenu, il peut répondre à une
-              question, participer à une animation collective ou tenter un défi.
-              Le dispositif doit rester compréhensible, rapide et adapté au lieu
-              où le food truck est installé.
+              Le participant fait tourner une roue pour découvrir une catégorie
+              d'activité. Selon le format choisi, il peut répondre à une question,
+              participer à un jeu collectif ou réaliser un défi. L'animation doit
+              rester rapide, compréhensible et adaptée au lieu d'installation.
             </p>
 
             <ul>
-              <li>Questions sur la culture mexicaine et les ingrédients.</li>
+              <li>Questions sur le Mexique et les ingrédients.</li>
               <li>Défis ludiques entre amis ou en équipe.</li>
               <li>Récompenses possibles : remise, bonus ou surprise.</li>
-              <li>Vidéos et réactions diffusées uniquement avec l'accord des personnes filmées.</li>
+              <li>Contenus vidéo diffusés uniquement avec l'accord des personnes filmées.</li>
             </ul>
           </div>
 
@@ -1563,16 +1528,16 @@
             </div>
 
             <div class="challenge-box">
-              <h3>Une expérience responsable</h3>
+              <h3>Les précautions</h3>
               <p>
-                La participation doit rester volontaire. Le dispositif ne doit pas
-                encourager une consommation excessive de piment ni présenter un défi
-                comme une preuve de résistance physique. Des options sans ingestion
-                de piment permettent aussi de participer à l'animation.
+                La participation doit rester volontaire. Les défis ne doivent pas
+                encourager une consommation excessive de piment ni mettre les
+                participants en difficulté. Des activités sans ingestion de piment
+                doivent également être proposées.
               </p>
               <p>
-                Les règles, les récompenses, la durée des défis et les modalités
-                d'organisation devront être définies avant le lancement.
+                Les règles, les récompenses, la durée des jeux et les modalités
+                d'organisation restent à définir.
               </p>
             </div>
           </div>
@@ -1588,44 +1553,45 @@
       <div class="container">
 
         <p class="section-label">Marché envisagé</p>
-        <h2>Public cible</h2>
+        <h2>Le public</h2>
 
         <p class="section-intro">
-          Le projet envisage une implantation à Toulouse, avec une attention
-          particulière portée aux jeunes adultes, aux étudiants et aux publics
-          présents lors d'événements. Ces segments constituent des hypothèses
-          de ciblage qui devront être confrontées à une étude de marché locale.
+          Toulouse est le territoire envisagé pour le lancement du projet. Les
+          étudiants et les jeunes actifs constituent les premières cibles étudiées,
+          tandis que les événements représentent un débouché potentiel pour le food
+          truck et son animation. Ces hypothèses devront être vérifiées par une
+          étude de marché locale.
         </p>
 
         <div class="audience-grid">
 
           <article class="audience-card">
             <div class="emoji">🎓</div>
-            <h3>Étudiants</h3>
+            <h3>Les étudiants</h3>
             <p>
-              Les campus et les associations étudiantes peuvent constituer des
-              points de contact pour tester l'offre, organiser des animations
-              et recueillir des retours sur les prix et les recettes.
+              Les campus et les associations étudiantes pourraient permettre de
+              tester les recettes, les prix et les animations auprès d'un public
+              susceptible de participer aux défis.
             </p>
           </article>
 
           <article class="audience-card">
             <div class="emoji">👥</div>
-            <h3>Jeunes actifs</h3>
+            <h3>Les jeunes actifs</h3>
             <p>
-              Les pauses déjeuner, les sorties entre collègues et les moments
-              entre amis représentent des occasions possibles de consommer une
-              street-food rapide et personnalisable.
+              Les pauses déjeuner, les sorties entre collègues et les moments entre
+              amis représentent des occasions possibles de consommer une street-food
+              rapide et personnalisable.
             </p>
           </article>
 
           <article class="audience-card">
             <div class="emoji">🎪</div>
-            <h3>Événements</h3>
+            <h3>Les événements</h3>
             <p>
               Les manifestations sportives, culturelles, musicales et associatives
-              pourraient accueillir le food truck et son animation, sous réserve
-              des autorisations, des partenariats et de la faisabilité logistique.
+              pourraient accueillir le food truck, selon les autorisations, les
+              partenariats et les contraintes logistiques.
             </p>
           </article>
 
@@ -1640,56 +1606,55 @@
       <div class="container">
 
         <p class="section-label">Mise en œuvre</p>
-        <h2>Étapes suivantes</h2>
+        <h2>Le développement</h2>
 
         <p class="section-intro">
-          Le passage du concept à une activité opérationnelle nécessite de tester
-          les hypothèses commerciales, de finaliser les recettes et de vérifier
-          la faisabilité technique de l'innovation. Les décisions devront être
-          prises à partir de retours clients et de données concrètes.
+          La concrétisation de Mexi’Fuego nécessite de confronter les hypothèses
+          commerciales et techniques à la réalité. Les étapes prioritaires concernent
+          l'étude du marché, la validation de la carte, les partenariats et les essais
+          du contenant comestible.
         </p>
 
         <div class="development-grid">
 
           <div>
-            <h3>Priorités commerciales</h3>
+            <h3>Les priorités commerciales</h3>
 
             <ul class="development-list">
-              <li>Étudier la demande à Toulouse et identifier les emplacements pertinents.</li>
-              <li>Interroger les clients potentiels sur les recettes, les prix et le niveau de piment.</li>
-              <li>Calculer le coût matière, les marges, les frais de fonctionnement et le seuil de rentabilité.</li>
+              <li>Étudier la demande à Toulouse et identifier les emplacements adaptés.</li>
+              <li>Interroger les clients potentiels sur les recettes, les prix et le piment.</li>
+              <li>Calculer les coûts, les marges, les frais de fonctionnement et le seuil de rentabilité.</li>
               <li>Contacter les associations étudiantes et les organisateurs d'événements.</li>
-              <li>Définir les canaux de communication et le calendrier éditorial.</li>
+              <li>Définir la stratégie de communication et le calendrier éditorial.</li>
             </ul>
           </div>
 
           <div>
-            <h3>Priorités techniques</h3>
+            <h3>Les priorités techniques</h3>
 
             <ul class="development-list">
-              <li>Réaliser des tests de recettes et standardiser les niveaux de piment.</li>
+              <li>Tester les recettes et standardiser les niveaux de piment.</li>
               <li>Définir les contraintes de préparation, de stockage et de transport.</li>
               <li>Fabriquer plusieurs prototypes de barquettes comestibles.</li>
-              <li>Documenter les tests de résistance, de conservation et de sécurité alimentaire.</li>
-              <li>Comparer les coûts et les impacts potentiels avec des contenants existants.</li>
+              <li>Documenter les essais de résistance, de conservation et de sécurité alimentaire.</li>
+              <li>Comparer les coûts et les impacts potentiels avec ceux des contenants existants.</li>
             </ul>
           </div>
 
         </div>
 
-        <div class="development-box" style="margin-top: 30px;">
-          <h3>Communication digitale</h3>
+        <div class="development-box">
+          <h3>La communication</h3>
           <p>
             Instagram et TikTok sont envisagés pour présenter les recettes, expliquer
             les niveaux de piment, diffuser les défis et annoncer les emplacements.
-            Les contenus pourront également montrer les coulisses de la conception
-            de la barquette comestible afin d'expliquer la démarche d'innovation,
-            ses essais et ses limites.
+            Les contenus pourront aussi montrer les étapes de conception de la
+            barquette comestible, les tests réalisés et les limites identifiées.
           </p>
           <p>
-            Les partenariats avec des créateurs de contenus spécialisés dans la food,
-            les associations étudiantes et les événements locaux pourront être étudiés
-            en fonction du budget, de la pertinence de l'audience et des résultats obtenus.
+            Les partenariats avec des créateurs de contenus food, les associations
+            étudiantes et les événements locaux pourront être étudiés selon le budget,
+            la pertinence de l'audience et les résultats obtenus.
           </p>
         </div>
 
@@ -1701,14 +1666,14 @@
     <section class="section contact" id="contact">
       <div class="container">
 
-        <p class="section-label">Projet Mexi’Fuego</p>
-        <h2>Contact projet</h2>
+        <p class="section-label">Informations du projet</p>
+        <h2>Le projet</h2>
 
         <p class="section-intro">
-          Mexi’Fuego est un projet de food truck qui associe street-food mexicaine,
-          animation participative et recherche d'une solution de contenant comestible.
-          Les échanges avec les clients potentiels, les associations et les partenaires
-          sont importants pour confronter le concept à la réalité du terrain.
+          Mexi’Fuego est un projet de food truck associant street-food mexicaine,
+          animation participative et recherche sur les contenants comestibles.
+          Les retours de clients potentiels, les échanges avec les associations et
+          les partenariats pourront contribuer à préciser son développement.
         </p>
 
         <div class="contact-actions">
@@ -1716,7 +1681,7 @@
              href="https://github.com/berthuitlea/Mexi-Fuego-2"
              target="_blank"
              rel="noopener noreferrer">
-            Consulter le projet
+            Voir le dépôt GitHub
           </a>
         </div>
 
@@ -1730,12 +1695,12 @@
   <footer>
     <div class="container footer-inner">
       <a class="logo" href="#accueil">Mexi<span>’</span>Fuego</a>
-      <p>Projet de food truck · Street-food mexicaine · Toulouse</p>
+      <p>Projet de food truck · Toulouse</p>
       <p>
         <a href="https://github.com/berthuitlea/Mexi-Fuego-2"
            target="_blank"
            rel="noopener noreferrer">
-          Dépôt du projet sur GitHub
+          Dépôt GitHub
         </a>
       </p>
     </div>
