@@ -1,16 +1,12 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mexi'Fuego — Tu choisis. Tu goûtes. Tu brûles.</title>
-<meta name="description" content="Mexi'Fuego : street food mexicaine, piment à la carte, Fuego Challenge et innovation avec des barquettes comestibles.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Présentation de Mexi’Fuego, son offre de street-food mexicaine, son animation et son projet de barquettes comestibles.">
+<title>Mexi’Fuego — Présentation du concept</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -19,15 +15,13 @@
   --dark: #17301C;
   --lime: #D5E68D;
   --teal: #5DA399;
-  --cream: #FFF8ED;
-  --white: #FFFFFF;
-  --ink: #242820;
-  --muted: #696C60;
-  --radius: 18px;
-  --shadow: 0 14px 40px #17301C12;
+  --cream: #FFF9EF;
+  --ink: #242821;
+  --muted: #60675E;
+  --line: #E5E7DE;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
@@ -35,1329 +29,828 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
-  color: var(--ink);
+  margin: 0;
   background: var(--cream);
-  line-height: 1.65;
+  color: var(--ink);
+  font: 16px/1.65 "Nunito", Arial, sans-serif;
 }
 
-img { display: block; width: 100%; object-fit: cover; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; }
-section { scroll-margin-top: 85px; }
+a { color: inherit; }
 
-h1, h2, h3, .brand, .display {
-  font-family: 'Contrail One', sans-serif;
+h1, h2, h3, .brand, .eyebrow, .number {
+  font-family: "Contrail One", Impact, sans-serif;
   font-weight: 400;
-  line-height: 1.08;
+  line-height: 1.15;
 }
 
-h1 { font-size: clamp(3.6rem, 9vw, 7.8rem); }
-h2 { font-size: clamp(2.5rem, 5vw, 4.4rem); }
-h3 { font-size: 1.65rem; }
-
-h2 em {
-  color: var(--orange);
-  font-style: normal;
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5.4rem);
+  margin: 0 0 20px;
 }
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  margin: 0 0 14px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+}
+
+p { margin: 0 0 14px; }
 
 .container {
-  width: min(1180px, 90%);
-  margin-inline: auto;
+  width: min(1120px, calc(100% - 36px));
+  margin: auto;
 }
 
-.section { padding: 100px 0; }
+.section { padding: 78px 0; }
 
-.kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  color: var(--green);
-  font-size: .78rem;
-  font-weight: 900;
-  letter-spacing: 2px;
+.eyebrow {
+  color: var(--orange);
+  letter-spacing: .08em;
   text-transform: uppercase;
-  margin-bottom: 17px;
+  margin-bottom: 12px;
 }
 
-.kicker::before {
-  content: "";
-  width: 26px;
-  height: 3px;
-  background: currentColor;
-  border-radius: 9px;
+.intro {
+  max-width: 780px;
+  margin-bottom: 30px;
 }
 
-.section-heading {
-  max-width: 760px;
-  margin-bottom: 42px;
-}
+.intro p, .muted { color: var(--muted); }
 
-.section-heading p {
-  max-width: 610px;
-  color: var(--muted);
-  margin-top: 18px;
-  font-size: 1.05rem;
-}
+/* Navigation */
 
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 22px;
-  border: 2px solid var(--orange);
-  border-radius: 8px;
-  background: var(--orange);
-  color: white;
-  font-weight: 900;
-  cursor: pointer;
-  transition: transform .2s, background .2s;
-}
-
-.btn:hover { transform: translateY(-3px); background: #D9330B; }
-
-.btn-light {
-  background: transparent;
-  border-color: white;
-  color: white;
-}
-
-.btn-light:hover { background: white; color: var(--dark); }
-
-.btn-dark {
-  background: var(--dark);
-  border-color: var(--dark);
-}
-
-.btn-dark:hover { background: #27472D; }
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 7px 12px;
-  border-radius: 100px;
-  background: var(--lime);
-  color: var(--dark);
-  font-size: .78rem;
-  font-weight: 900;
-}
-
-/* NAVIGATION */
-
-header {
+.topbar {
   position: sticky;
   top: 0;
-  z-index: 50;
-  background: var(--dark);
-  color: white;
-  border-bottom: 3px solid var(--orange);
+  z-index: 9;
+  background: #fff9eff2;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
 }
 
-.navbar {
-  min-height: 78px;
+.nav {
+  min-height: 74px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 12px 0;
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 1.9rem;
-  white-space: nowrap;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--dark);
 }
 
-.brand-flame { color: var(--orange); }
+.brand span { color: var(--orange); }
 
-nav {
+.links {
   display: flex;
-  align-items: center;
-  gap: 23px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-nav a {
-  font-size: .86rem;
+.links a {
+  text-decoration: none;
+  font-size: .9rem;
   font-weight: 800;
-  transition: color .2s;
 }
 
-nav a:hover { color: var(--lime); }
+.links a:hover { color: var(--orange); }
 
-.nav-cta {
-  background: var(--orange);
-  padding: 10px 14px;
-  border-radius: 6px;
-}
-
-/* HERO */
+/* Accueil */
 
 .hero {
-  min-height: 690px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  color: white;
   background: var(--dark);
+  color: white;
+  padding: 68px 0;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, #102516 0%, #102516E8 38%, #10251642 100%),
-    url('https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=2000&q=85')
-    center 55% / cover;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 38px;
+  align-items: center;
 }
 
-.hero::after {
-  content: "¡FUEGO!";
-  position: absolute;
-  right: -25px;
-  bottom: 0;
-  font-family: 'Contrail One', sans-serif;
-  font-size: clamp(6rem, 18vw, 17rem);
-  color: #FFFFFF0A;
-  line-height: .85;
-  pointer-events: none;
+.hero .eyebrow { color: var(--lime); }
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--orange);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 790px;
-  padding: 100px 0;
+.hero p {
+  color: #e7eee4;
+  font-size: 1.08rem;
 }
 
-.hero .kicker { color: var(--lime); }
-
-.hero h1 {
-  text-transform: uppercase;
-  letter-spacing: -1px;
-}
-
-.hero h1 span { color: var(--orange); }
-
-.hero-copy {
-  max-width: 560px;
-  margin: 25px 0 30px;
-  font-size: 1.13rem;
-  color: #FFFFFFE8;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.hero-stamp {
-  display: inline-block;
-  margin-top: 38px;
-  padding: 11px 16px;
+.hero-note {
   border-left: 4px solid var(--orange);
-  background: #FFFFFF12;
-  font-weight: 800;
-  font-size: .9rem;
+  padding: 5px 0 5px 16px;
+  margin: 24px 0;
+  color: #f3f5f0;
 }
 
-/* BANDEAU */
+.art {
+  background: var(--orange);
+  color: var(--dark);
+  border-radius: 24px;
+  padding: 28px;
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 10px 10px 0 var(--lime);
+}
 
-.ticker {
-  overflow: hidden;
+.art .pepper {
+  font-size: 7rem;
+  line-height: 1;
+}
+
+.art strong {
+  font: 2.2rem/1.15 "Contrail One", sans-serif;
+}
+
+.art small {
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.fact {
+  border: 1px solid #ffffff38;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.fact strong {
+  display: block;
+  color: var(--lime);
+}
+
+.fact span {
+  font-size: .86rem;
+  color: #e7eee4;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 30px;
   background: var(--orange);
   color: white;
-  padding: 15px 0;
-}
-
-.ticker-inner {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 22px;
+  text-decoration: none;
   font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: .84rem;
+  margin: 8px 8px 0 0;
 }
 
-.ticker span { color: var(--lime); }
+.btn:hover { filter: brightness(.92); }
 
-/* CONCEPT */
+/* Sections et cartes */
 
-.concept-grid {
+.two, .innovation-grid {
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 65px;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
-.photo-stack { position: relative; }
-
-.photo-stack img {
-  height: 480px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.photo-tag {
-  position: absolute;
-  right: -18px;
-  bottom: 25px;
-  background: var(--lime);
-  color: var(--dark);
-  padding: 17px 20px;
-  border-radius: 8px;
-  transform: rotate(3deg);
-  font-family: 'Contrail One', sans-serif;
-  font-size: 1.35rem;
-  box-shadow: var(--shadow);
-}
-
-.concept-copy > p {
-  color: var(--muted);
-  margin-top: 20px;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 13px;
-  margin-top: 28px;
-}
-
-.value {
-  padding: 17px;
-  border: 1px solid #17301C18;
-  border-radius: 12px;
+.card, .value, .menu-card, .spice {
   background: white;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  padding: 23px;
 }
 
-.value-icon { font-size: 1.5rem; margin-bottom: 5px; }
-.value strong { display: block; }
-.value p { color: var(--muted); font-size: .87rem; margin-top: 4px; }
-
-/* MENU */
-
-.menu-section {
-  background: var(--dark);
-  color: white;
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+  margin-top: 22px;
 }
 
-.menu-section .kicker { color: var(--lime); }
-.menu-section .section-heading p { color: #FFFFFFB8; }
+.symbol { font-size: 1.8rem; }
+
+.value h3 { color: var(--dark); }
+
+/* Carte */
+
+.menu-section { background: #f2f5eb; }
 
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 16px;
 }
 
 .menu-card {
+  padding: 0;
   overflow: hidden;
-  border-radius: var(--radius);
-  background: white;
-  color: var(--ink);
-  transition: transform .25s;
 }
 
-.menu-card:hover { transform: translateY(-6px); }
-
-.menu-photo { position: relative; }
-
-.menu-photo img { height: 235px; }
-
-.menu-number {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: var(--orange);
+.menu-head {
+  background: var(--dark);
   color: white;
-  border-radius: 6px;
-  padding: 6px 10px;
-  font-weight: 900;
-  font-size: .75rem;
-}
-
-.menu-content { padding: 23px; }
-
-.menu-title-row {
+  padding: 17px 20px;
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
 }
 
-.menu-card h3 { font-size: 1.6rem; }
+.menu-head h3 { margin: 0; }
 
 .price {
-  color: var(--orange);
+  color: var(--lime);
   font-weight: 900;
-  font-size: 1.18rem;
   white-space: nowrap;
 }
 
-.menu-card p {
+.menu-body { padding: 18px 20px; }
+
+.menu-body p {
   color: var(--muted);
-  font-size: .93rem;
   margin-top: 10px;
-  min-height: 75px;
 }
 
-.menu-flavour {
+.tag {
   display: inline-block;
-  margin-top: 12px;
-  color: var(--green);
-  font-size: .77rem;
+  background: #fce6de;
+  color: #9d2c0b;
+  border-radius: 20px;
+  padding: 3px 9px;
+  font-size: .78rem;
   font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: .7px;
 }
 
-.menu-bottom {
-  margin-top: 25px;
-  padding: 18px 20px;
-  border: 1px solid #FFFFFF35;
-  border-radius: 12px;
-  color: #FFFFFFD9;
+.note {
+  padding: 16px 18px;
+  background: white;
+  border-left: 4px solid var(--green);
+  border-radius: 0 12px 12px 0;
+  margin-top: 20px;
+  color: var(--muted);
 }
 
-/* ECHELLE PICANTE */
-
-.spice-section { background: var(--lime); }
-
-.spice-section .kicker { color: var(--dark); }
-
-.spice-section .section-heading p { color: #35442C; }
+/* Échelle de piquant */
 
 .spice-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 13px;
 }
 
-.spice-card {
-  background: white;
-  padding: 26px 21px;
-  border-radius: 14px;
-  border-top: 6px solid var(--green);
-  box-shadow: 0 8px 20px #17301C0A;
-}
-
-.spice-card:nth-child(2) { border-color: #E3A12D; }
-.spice-card:nth-child(3) { border-color: var(--orange); }
-.spice-card:nth-child(4) { border-color: #9B2119; }
-
-.spice-level {
-  color: var(--muted);
-  font-size: .76rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.spice-icon {
-  margin: 15px 0;
-  font-size: 2rem;
-  letter-spacing: 2px;
-}
-
-.spice-card h3 { font-size: 1.65rem; }
-.spice-card p { margin-top: 9px; color: var(--muted); font-size: .91rem; }
-
-/* INNOVATION */
-
-.innovation-section {
-  background: white;
-}
-
-.innovation-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.number {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
   align-items: center;
-  gap: 65px;
-}
-
-.innovation-visual {
-  position: relative;
-}
-
-.innovation-visual img {
-  height: 510px;
-  border-radius: var(--radius);
-}
-
-.innovation-sticker {
-  position: absolute;
-  right: -20px;
-  bottom: 30px;
-  width: 135px;
-  height: 135px;
+  justify-content: center;
   border-radius: 50%;
+  background: var(--lime);
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.spice:nth-child(2) .number { background: #f8d28b; }
+.spice:nth-child(3) .number { background: #f7a17d; }
+
+.spice:nth-child(4) .number {
   background: var(--orange);
   color: white;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 15px;
-  font-family: 'Contrail One', sans-serif;
-  font-size: 1.2rem;
-  transform: rotate(8deg);
-  border: 5px solid white;
 }
 
-.innovation-copy p {
-  margin-top: 18px;
+.spice p {
   color: var(--muted);
+  font-size: .95rem;
 }
 
-.innovation-points {
-  display: grid;
-  gap: 13px;
-  margin: 25px 0;
-}
+/* Innovation */
 
-.innovation-point {
-  display: flex;
-  gap: 13px;
-  align-items: flex-start;
-}
-
-.innovation-point-icon {
-  flex: 0 0 40px;
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  background: var(--lime);
-  border-radius: 10px;
-  font-size: 1.2rem;
-}
-
-.innovation-point strong { display: block; }
-.innovation-point p { margin: 3px 0 0; font-size: .91rem; }
-
-.note {
-  padding: 13px 15px;
-  border-left: 3px solid var(--green);
-  background: var(--cream);
-  color: var(--muted);
-  font-size: .82rem;
-  margin-top: 20px;
-}
-
-/* CHALLENGE */
-
-.challenge-section {
+.innovation {
   background: var(--dark);
   color: white;
-  position: relative;
-  overflow: hidden;
 }
 
-.challenge-section .kicker { color: var(--lime); }
-.challenge-section .section-heading p { color: #FFFFFFB8; }
+.innovation .eyebrow { color: var(--lime); }
 
-.challenge-layout {
+.innovation .intro p { color: #dce6d9; }
+
+.banner {
+  background: #23462b;
+  border: 1px solid #ffffff20;
+  border-radius: 18px;
+  padding: 26px;
+  margin-bottom: 20px;
+}
+
+.banner h3 { color: var(--lime); }
+
+.banner p { color: #e6eee3; }
+
+.innovation-card {
+  background: #f9faf5;
+  color: var(--ink);
+  border-radius: 17px;
+  padding: 24px;
+}
+
+.innovation-card h3 { color: var(--dark); }
+
+.innovation-card p, .innovation-card li { color: var(--muted); }
+
+.formula {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  margin: 16px 0;
+}
+
+.formula div {
+  background: #eef3e7;
+  border-radius: 11px;
+  padding: 13px;
+}
+
+.formula strong {
+  display: block;
+  color: var(--green);
+  font-size: 1.35rem;
+}
+
+.formula span { font-size: .86rem; }
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.step {
+  background: #23462b;
+  border: 1px solid #ffffff20;
+  border-radius: 13px;
+  padding: 17px;
+}
+
+.step b {
+  font: 1.6rem "Contrail One";
+  color: var(--lime);
+}
+
+.step h3 {
+  font-size: 1.05rem;
+  margin-top: 8px;
+}
+
+.step p {
+  color: #dce6d9;
+  font-size: .9rem;
+}
+
+.notice {
+  background: #ffffff12;
+  border-left: 4px solid var(--orange);
+  padding: 16px;
+  border-radius: 0 10px 10px 0;
+  margin-top: 20px;
+  color: #f0f3ed;
+}
+
+/* Fuego Challenge */
+
+.challenge-grid {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
-  align-items: center;
-  gap: 55px;
-}
-
-.challenge-copy h2 span { color: var(--orange); }
-
-.challenge-copy p {
-  color: #FFFFFFC9;
-  margin-top: 18px;
-}
-
-.challenge-rules {
-  display: grid;
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.challenge-rule {
-  display: flex;
-  gap: 13px;
-  align-items: flex-start;
-}
-
-.rule-icon {
-  font-size: 1.3rem;
-  width: 36px;
-  flex-shrink: 0;
-}
-
-.challenge-rule strong { display: block; }
-.challenge-rule p { margin-top: 2px; font-size: .9rem; }
-
-.wheel-panel {
-  padding: 30px;
-  border-radius: 20px;
-  background: #FFFFFF0B;
-  border: 1px solid #FFFFFF22;
-  text-align: center;
-}
-
-.wheel-panel h3 { font-size: 1.8rem; }
-.wheel-panel > p { color: #FFFFFFB8; font-size: .9rem; margin: 10px 0 22px; }
-
-.wheel-wrap {
-  width: min(100%, 370px);
-  margin: 0 auto 22px;
-  position: relative;
-  padding-top: 12px;
-}
-
-.wheel-pointer {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 17px solid transparent;
-  border-right: 17px solid transparent;
-  border-top: 31px solid var(--lime);
-  filter: drop-shadow(0 3px 3px #0005);
-}
-
-.wheel {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: 7px solid white;
-  box-shadow: 0 0 0 5px var(--orange), 0 16px 35px #0005;
-  background: conic-gradient(
-    var(--orange) 0deg 45deg,
-    var(--green) 45deg 90deg,
-    #E5A42D 90deg 135deg,
-    var(--teal) 135deg 180deg,
-    var(--orange) 180deg 225deg,
-    var(--green) 225deg 270deg,
-    #E5A42D 270deg 315deg,
-    var(--teal) 315deg 360deg
-  );
-  transition: transform 4.2s cubic-bezier(.12,.72,.12,1);
-  overflow: hidden;
-}
-
-.wheel-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 94px;
-  margin-left: -47px;
-  margin-top: -12px;
-  text-align: center;
-  color: white;
-  font-size: .7rem;
-  line-height: 1.1;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-shadow: 0 1px 2px #0003;
-}
-
-.wheel-label:nth-child(1) { transform: rotate(22.5deg) translateY(-113px) rotate(-22.5deg); }
-.wheel-label:nth-child(2) { transform: rotate(67.5deg) translateY(-113px) rotate(-67.5deg); }
-.wheel-label:nth-child(3) { transform: rotate(112.5deg) translateY(-113px) rotate(-112.5deg); }
-.wheel-label:nth-child(4) { transform: rotate(157.5deg) translateY(-113px) rotate(-157.5deg); }
-.wheel-label:nth-child(5) { transform: rotate(202.5deg) translateY(-113px) rotate(-202.5deg); }
-.wheel-label:nth-child(6) { transform: rotate(247.5deg) translateY(-113px) rotate(-247.5deg); }
-.wheel-label:nth-child(7) { transform: rotate(292.5deg) translateY(-113px) rotate(-292.5deg); }
-.wheel-label:nth-child(8) { transform: rotate(337.5deg) translateY(-113px) rotate(-337.5deg); }
-
-.wheel-center {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  background: var(--dark);
-  border: 5px solid white;
-  display: grid;
-  place-items: center;
-  color: var(--lime);
-  font-family: 'Contrail One', sans-serif;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 12px #0003;
-}
-
-.wheel-button { width: 100%; }
-
-.wheel-button:disabled {
-  opacity: .6;
-  cursor: wait;
-  transform: none;
-}
-
-.wheel-result {
-  display: none;
-  text-align: left;
-  margin-top: 20px;
-  padding: 20px;
-  background: var(--cream);
-  color: var(--ink);
-  border-radius: 12px;
-}
-
-.wheel-result.visible { display: block; animation: pop .35s ease; }
-.wheel-result .result-type {
-  color: var(--green);
-  font-size: .75rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 900;
-}
-
-.wheel-result h3 { margin: 5px 0 8px; }
-.wheel-result p { margin-bottom: 0; font-size: .93rem; }
-
-@keyframes pop {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.wheel-disclaimer {
-  color: #FFFFFF99;
-  font-size: .75rem;
-  margin-top: 15px;
-}
-
-/* CONTACT */
-
-.contact-section {
-  background: var(--orange);
-  color: white;
-}
-
-.contact-section .kicker { color: var(--dark); }
-.contact-section h2 em { color: var(--dark); }
-.contact-section .section-heading p { color: #FFFFFFE0; }
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-.contact-card {
-  padding: 28px;
-  border: 1px solid #FFFFFF65;
-  background: #FFFFFF12;
-  border-radius: 14px;
+.types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
 }
 
-.contact-card h3 { margin-bottom: 10px; }
-.contact-card p { margin-bottom: 8px; }
-.contact-card a { text-decoration: underline; text-underline-offset: 3px; }
+.type {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 15px;
+}
 
-/* FOOTER */
+.type strong {
+  display: block;
+  color: var(--dark);
+}
+
+.type span {
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+/* Perspectives */
+
+.roadmap { padding-left: 20px; }
+
+.roadmap li {
+  padding: 0 0 13px 4px;
+  color: var(--muted);
+}
+
+.roadmap strong {
+  display: block;
+  color: var(--dark);
+}
+
+/* Contact et pied de page */
+
+.contact {
+  background: var(--orange);
+  color: white;
+}
+
+.contact .eyebrow { color: var(--dark); }
+
+.contact p {
+  max-width: 780px;
+  color: #fff0e9;
+}
+
+.contact .btn { background: var(--dark); }
 
 footer {
-  background: var(--dark);
-  color: white;
-  padding: 35px 0;
+  background: #102315;
+  color: #dce6d9;
+  padding: 24px 0;
+  font-size: .9rem;
 }
 
-.footer-row {
+.foot {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 22px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
-.footer-row p { color: #FFFFFFB8; font-size: .85rem; margin: 0; }
-.footer-slogan { color: var(--lime) !important; font-family: 'Contrail One', sans-serif; font-size: 1.1rem !important; }
+footer a { color: var(--lime); }
 
-@media (max-width: 950px) {
-  .navbar { flex-direction: column; padding: 16px 0; }
-  nav { justify-content: center; flex-wrap: wrap; gap: 14px; }
-  .concept-grid, .innovation-grid, .challenge-layout { grid-template-columns: 1fr; gap: 40px; }
-  .photo-stack { max-width: 650px; }
-  .innovation-visual { max-width: 650px; }
-  .menu-grid { grid-template-columns: repeat(2, 1fr); }
-  .spice-grid { grid-template-columns: repeat(2, 1fr); }
-  .challenge-copy { max-width: 700px; }
+.small {
+  font-size: .88rem;
+  color: var(--muted);
 }
 
-@media (max-width: 600px) {
-  .section { padding: 70px 0; }
-  .navbar { gap: 12px; }
-  .brand { font-size: 1.65rem; }
-  nav { gap: 10px 15px; }
-  nav a { font-size: .8rem; }
-  .nav-cta { padding: 7px 10px; }
-  .hero { min-height: 610px; }
-  .hero-content { padding: 75px 0; }
-  .hero h1 { font-size: clamp(3.4rem, 15vw, 5.2rem); }
-  .hero-copy { font-size: 1rem; }
-  .hero-actions .btn { width: 100%; }
-  .ticker-inner { gap: 10px 16px; font-size: .73rem; }
-  .photo-stack img, .innovation-visual img { height: 330px; }
-  .photo-tag { right: -5px; font-size: 1.05rem; }
-  .values-grid { gap: 10px; }
-  .value { padding: 13px; }
-  .menu-grid { grid-template-columns: 1fr; }
-  .menu-photo img { height: 240px; }
-  .spice-grid { gap: 10px; }
-  .spice-card { padding: 18px 14px; }
-  .spice-card h3 { font-size: 1.4rem; }
-  .spice-icon { font-size: 1.5rem; }
-  .innovation-sticker { width: 105px; height: 105px; right: -5px; font-size: 1rem; }
-  .wheel-panel { padding: 20px 14px; }
-  .wheel-label { font-size: .58rem; width: 76px; margin-left: -38px; }
-  .wheel-label:nth-child(n) { --radius: 35%; }
-  .wheel-label:nth-child(1) { transform: rotate(22.5deg) translateY(-35vw) rotate(-22.5deg); }
-  .wheel-label:nth-child(2) { transform: rotate(67.5deg) translateY(-35vw) rotate(-67.5deg); }
-  .wheel-label:nth-child(3) { transform: rotate(112.5deg) translateY(-35vw) rotate(-112.5deg); }
-  .wheel-label:nth-child(4) { transform: rotate(157.5deg) translateY(-35vw) rotate(-157.5deg); }
-  .wheel-label:nth-child(5) { transform: rotate(202.5deg) translateY(-35vw) rotate(-202.5deg); }
-  .wheel-label:nth-child(6) { transform: rotate(247.5deg) translateY(-35vw) rotate(-247.5deg); }
-  .wheel-label:nth-child(7) { transform: rotate(292.5deg) translateY(-35vw) rotate(-292.5deg); }
-  .wheel-label:nth-child(8) { transform: rotate(337.5deg) translateY(-35vw) rotate(-337.5deg); }
-  .wheel-center { width: 68px; height: 68px; font-size: 1rem; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .footer-row { flex-direction: column; align-items: flex-start; }
+/* Responsive */
+
+@media(max-width:850px) {
+  .hero-grid, .two, .innovation-grid, .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .value-grid, .spice-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width:560px) {
+  .section { padding: 55px 0; }
+  .hero { padding: 48px 0; }
+
+  .facts, .menu-grid, .value-grid, .spice-grid,
+  .formula, .process, .types {
+    grid-template-columns: 1fr;
+  }
+
+  .art { min-height: 220px; }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .links { gap: 10px 14px; }
+
+  .card, .innovation-card { padding: 19px; }
 }
 </style>
 </head>
 
 <body>
-
-<header>
-  <div class="container navbar">
-    <a class="brand" href="#accueil" aria-label="Mexi'Fuego, accueil">
-      MEXI'<span class="brand-flame">FUEGO 🔥</span>
-    </a>
-    <nav aria-label="Navigation principale">
-      <a href="#concept">Notre univers</a>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#accueil">MEXI<span>’FUEGO</span></a>
+    <nav class="links" aria-label="Navigation principale">
+      <a href="#concept">Le concept</a>
       <a href="#carte">La carte</a>
-      <a href="#picante">Le piment</a>
-      <a href="#innovation">Notre innovation</a>
-      <a href="#challenge" class="nav-cta">🎯 Le challenge</a>
+      <a href="#piquant">Le piquant</a>
+      <a href="#innovation">Innovation</a>
+      <a href="#challenge">Animation</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
-
-  <!-- HERO -->
   <section class="hero" id="accueil">
-    <div class="container">
-      <div class="hero-content">
-        <span class="kicker">Street food mexicaine · 100 % caractère</span>
-        <h1>Tu choisis.<br>Tu goûtes.<br><span>Tu brûles.</span></h1>
-        <p class="hero-copy">
-          Des recettes généreuses, du piment à la carte et une expérience
-          qui sort de l'ordinaire. Bienvenue dans l'univers Mexi'Fuego :
-          ici, c'est toi qui décides jusqu'où tu vas.
-        </p>
-        <div class="hero-actions">
-          <a href="#carte" class="btn">🌮 Découvrir la carte</a>
-          <a href="#challenge" class="btn btn-light">🔥 Tenter le challenge</a>
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Présentation du projet</div>
+        <h1>Street-food mexicaine <em>personnalisable</em></h1>
+        <p>Mexi’Fuego est un concept de food-truck spécialisé dans une offre inspirée de la street-food mexicaine. Les recettes associent des ingrédients généreux à plusieurs niveaux de piquant, afin que chacun puisse choisir une intensité adaptée à ses préférences.</p>
+        <div class="hero-note">Le projet combine une offre de restauration, une animation participative et un travail d’innovation autour de l’emballage alimentaire.</div>
+        <a class="btn" href="#concept">Présentation du concept</a>
+        <a class="btn" href="#innovation">Projet d’innovation</a>
+        <div class="facts">
+          <div class="fact"><strong>4 niveaux</strong><span>Pour personnaliser le piquant</span></div>
+          <div class="fact"><strong>Fuego Challenge</strong><span>Une animation associée à la commande</span></div>
+          <div class="fact"><strong>Barquette comestible</strong><span>Un prototype à développer et tester</span></div>
         </div>
-        <div class="hero-stamp">🌶️ Du goût. Du jeu. Du fuego.</div>
+      </div>
+      <div class="art">
+        <small>Mexi’Fuego · Food-truck</small>
+        <div class="pepper" aria-hidden="true">🌶️</div>
+        <strong>Tu choisis.<br>Tu goûtes.<br>Tu brûles.</strong>
+        <small>Street-food · Piment · Partage</small>
       </div>
     </div>
   </section>
 
-  <div class="ticker">
-    <div class="container ticker-inner">
-      <div>🌮 STREET FOOD</div><span>✦</span>
-      <div>🌶️ TON NIVEAU DE PIMENT</div><span>✦</span>
-      <div>🎯 TON CHALLENGE</div><span>✦</span>
-      <div>♻️ NOTRE INNOVATION</div>
-    </div>
-  </div>
-
-  <!-- CONCEPT -->
   <section class="section" id="concept">
-    <div class="container concept-grid">
-      <div class="photo-stack">
-        <img
-          src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=1200&q=85"
-          alt="Tacos et street food d'inspiration mexicaine"
-          loading="lazy">
-        <div class="photo-tag">¡QUE RICO! 🌮</div>
+    <div class="container">
+      <div class="intro">
+        <div class="eyebrow">01 · Présentation générale</div>
+        <h2>Le concept et le positionnement de Mexi’Fuego</h2>
+        <p>Mexi’Fuego souhaite rendre la street-food mexicaine accessible et personnalisable. Le repas peut être accompagné d’une animation qui favorise les échanges entre les clients.</p>
       </div>
 
-      <div class="concept-copy">
-        <span class="kicker">Notre univers</span>
-        <h2>Pas juste un repas. <em>Une expérience.</em></h2>
-        <p>
-          Mexi'Fuego, c'est la street food mexicaine généreuse, relevée
-          et personnalisable. On vient pour les saveurs, on reste pour
-          l'ambiance et on repart avec une histoire à raconter.
-        </p>
-        <p>
-          Notre idée : rendre le piment ludique et accessible. Que tu sois
-          adepte de douceur ou amateur de sensations fortes, tu gardes
-          toujours le contrôle de ton expérience.
-        </p>
+      <div class="two">
+        <article class="card">
+          <h3>Mission</h3>
+          <p>Proposer une street-food mexicaine généreuse, accessible et personnalisable, dans laquelle chaque client choisit l’intensité de son expérience. Le piquant doit relever les saveurs sans empêcher chacun de profiter de son repas.</p>
+        </article>
 
-        <div class="values-grid">
-          <div class="value">
-            <div class="value-icon">🔥</div>
-            <strong>Audace</strong>
-            <p>On ose sortir des sentiers battus.</p>
-          </div>
-          <div class="value">
-            <div class="value-icon">🤝</div>
-            <strong>Convivialité</strong>
-            <p>Du partage et de la bonne humeur.</p>
-          </div>
-          <div class="value">
-            <div class="value-icon">🌮</div>
-            <strong>Gourmandise</strong>
-            <p>Des recettes généreuses et savoureuses.</p>
-          </div>
-          <div class="value">
-            <div class="value-icon">🌱</div>
-            <strong>Liberté</strong>
-            <p>Tu personnalises ton expérience.</p>
-          </div>
-        </div>
+        <article class="card">
+          <h3>Perspectives de développement</h3>
+          <p>Le concept pourrait être présent sur différents lieux et formats : événements étudiants, festivals, marchés, manifestations sportives, événements culturels et prestations privées. Ces débouchés constituent des pistes de développement du projet.</p>
+        </article>
+      </div>
+
+      <div class="value-grid">
+        <article class="value">
+          <div class="symbol">🔥</div>
+          <h3>Audace</h3>
+          <p>Proposer un concept distinctif et explorer de nouvelles façons de vivre la street-food.</p>
+        </article>
+
+        <article class="value">
+          <div class="symbol">🤝</div>
+          <h3>Convivialité</h3>
+          <p>Créer un moment de partage avec les clients, les partenaires et les équipes.</p>
+        </article>
+
+        <article class="value">
+          <div class="symbol">🌮</div>
+          <h3>Gourmandise</h3>
+          <p>Mettre en avant des recettes généreuses, le goût et la qualité des ingrédients.</p>
+        </article>
+
+        <article class="value">
+          <div class="symbol">♻️</div>
+          <h3>Responsabilité</h3>
+          <p>Étudier des pratiques visant à limiter le gaspillage et à mieux valoriser certaines matières.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- CARTE -->
   <section class="section menu-section" id="carte">
     <div class="container">
-      <div class="section-heading">
-        <span class="kicker">La carte Mexi'Fuego</span>
-        <h2>Attention, ça va <em>se déguster.</em></h2>
-        <p>
-          Des recettes pleines de caractère, des ingrédients gourmands
-          et des saveurs qui réveillent les papilles.
-        </p>
+      <div class="intro">
+        <div class="eyebrow">02 · Offre de restauration</div>
+        <h2>La carte et les prix envisagés</h2>
+        <p>La carte proposée s’inspire de recettes de street-food mexicaine. Les prix indiqués sont ceux présentés dans le dossier de marque.</p>
       </div>
 
       <div class="menu-grid">
         <article class="menu-card">
-          <div class="menu-photo">
-            <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=900&q=85"
-                 alt="Tacos au poulet" loading="lazy">
-            <span class="menu-number">01 · PICANTE TACOS</span>
-          </div>
-          <div class="menu-content">
-            <div class="menu-title-row"><h3>El Pollo</h3><span class="price">11 €</span></div>
-            <p>Poulet mariné, cheddar, pico de gallo, coriandre et sauce chipotle.</p>
-            <span class="menu-flavour">🌶️ Savoureux & généreux</span>
-          </div>
+          <div class="menu-head"><h3>El pollo</h3><span class="price">11 €</span></div>
+          <div class="menu-body"><span class="tag">Picante Tacos</span><p>Poulet mariné, cheddar, pico de gallo, coriandre et sauce chipotle.</p></div>
         </article>
 
         <article class="menu-card">
-          <div class="menu-photo">
-            <img src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?auto=format&fit=crop&w=900&q=85"
-                 alt="Tacos à la viande" loading="lazy">
-            <span class="menu-number">02 · PICANTE TACOS</span>
-          </div>
-          <div class="menu-content">
-            <div class="menu-title-row"><h3>El Beef</h3><span class="price">12 €</span></div>
-            <p>Bœuf effiloché, oignons rouges, cheddar et jalapeños.</p>
-            <span class="menu-flavour">🔥 Un maximum de caractère</span>
-          </div>
+          <div class="menu-head"><h3>El beef</h3><span class="price">12 €</span></div>
+          <div class="menu-body"><span class="tag">Picante Tacos</span><p>Bœuf effiloché, oignons rouges, cheddar et jalapeños.</p></div>
         </article>
 
         <article class="menu-card">
-          <div class="menu-photo">
-            <img src="https://images.unsplash.com/photo-1624300629298-e9de39c13be5?auto=format&fit=crop&w=900&q=85"
-                 alt="Tacos croustillants" loading="lazy">
-            <span class="menu-number">03 · PICANTE TACOS</span>
-          </div>
-          <div class="menu-content">
-            <div class="menu-title-row"><h3>El Crispy</h3><span class="price">12 €</span></div>
-            <p>Poulet croustillant, guacamole, chou rouge et jalapeños frits.</p>
-            <span class="menu-flavour">💥 Croustillant & gourmand</span>
-          </div>
+          <div class="menu-head"><h3>El crispy</h3><span class="price">12 €</span></div>
+          <div class="menu-body"><span class="tag">Picante Tacos</span><p>Poulet croustillant, guacamole, chou rouge et jalapeños frits.</p></div>
         </article>
 
         <article class="menu-card">
-          <div class="menu-photo">
-            <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=85"
-                 alt="Burrito garni" loading="lazy">
-            <span class="menu-number">04 · LE GÉNÉREUX</span>
-          </div>
-          <div class="menu-content">
-            <div class="menu-title-row"><h3>Fuego Burrito</h3><span class="price">12 €</span></div>
-            <p>Riz, haricots rouges, bœuf haché, cheddar, guacamole, pico de gallo et sauce picante.</p>
-            <span class="menu-flavour">🌯 De quoi se régaler</span>
-          </div>
+          <div class="menu-head"><h3>Fuego Burrito</h3><span class="price">12 €</span></div>
+          <div class="menu-body"><p>Riz, haricots rouges, viande hachée, cheddar, guacamole, pico de gallo et sauce picante.</p></div>
         </article>
 
         <article class="menu-card">
-          <div class="menu-photo">
-            <img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=900&q=85"
-                 alt="Nachos et garnitures" loading="lazy">
-            <span class="menu-number">05 · À PARTAGER</span>
-          </div>
-          <div class="menu-content">
-            <div class="menu-title-row"><h3>Nachos Picante</h3><span class="price">10 €</span></div>
-            <p>Tortilla chips, cheddar fondu, guacamole, pico de gallo, jalapeños et sauce au choix.</p>
-            <span class="menu-flavour">🧀 Le plaisir à partager</span>
-          </div>
+          <div class="menu-head"><h3>Nachos Picante</h3><span class="price">10 €</span></div>
+          <div class="menu-body"><p>Tortilla chips, cheddar fondu, guacamole, pico de gallo, jalapeños et sauce au choix.</p></div>
         </article>
 
         <article class="menu-card">
-          <div class="menu-photo">
-            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
-                 alt="Sauces et ingrédients frais" loading="lazy">
-            <span class="menu-number">06 · CHOISIS TON FEU</span>
-          </div>
-          <div class="menu-content">
-            <div class="menu-title-row"><h3>Nos salsas</h3><span class="price">À choisir</span></div>
-            <p>Caliente, Fuego ou Diablo : des sauces pour relever tes recettes selon tes envies.</p>
-            <span class="menu-flavour">🌶️ À toi de doser</span>
-          </div>
+          <div class="menu-head"><h3>Salsas et guacamole</h3><span class="price">3 niveaux</span></div>
+          <div class="menu-body"><p>Des sauces Caliente, Fuego et Diablo, ainsi que du guacamole décliné selon l’intensité choisie.</p></div>
         </article>
       </div>
 
-      <div class="menu-bottom">
-        <strong>🌶️ La règle est simple :</strong>
-        tu choisis ton plat, puis ton niveau de piment. Tu gardes le contrôle.
-        Les prix et recettes sont ceux prévus dans notre carte de présentation.
-      </div>
+      <div class="note"><strong>Personnalisation :</strong> l’intensité du piquant est un élément central de l’offre. La composition détaillée et les prix définitifs de chaque sauce ou supplément restent à confirmer.</div>
     </div>
   </section>
 
-  <!-- PICANTE -->
-  <section class="section spice-section" id="picante">
+  <section class="section" id="piquant">
     <div class="container">
-      <div class="section-heading">
-        <span class="kicker">L'échelle Picante</span>
-        <h2>Jusqu'où veux-tu <em>aller ?</em></h2>
-        <p>
-          Quatre niveaux pour quatre expériences. Choisis celui qui te
-          ressemble et laisse parler tes papilles.
-        </p>
+      <div class="intro">
+        <div class="eyebrow">03 · Personnalisation</div>
+        <h2>Une échelle de piquant en quatre niveaux</h2>
+        <p>Chaque niveau correspond à une intensité différente, afin que le client puisse choisir selon ses habitudes.</p>
       </div>
 
       <div class="spice-grid">
-        <article class="spice-card">
-          <span class="spice-level">Niveau 01</span>
-          <div class="spice-icon">🌶️</div>
-          <h3>Tranquilo</h3>
-          <p>Des saveurs douces et équilibrées, idéales pour découvrir notre univers.</p>
-        </article>
-
-        <article class="spice-card">
-          <span class="spice-level">Niveau 02</span>
-          <div class="spice-icon">🌶️🌶️</div>
-          <h3>Caliente</h3>
-          <p>Une touche de piment pour relever les saveurs sans masquer les ingrédients.</p>
-        </article>
-
-        <article class="spice-card">
-          <span class="spice-level">Niveau 03</span>
-          <div class="spice-icon">🌶️🌶️🌶️</div>
-          <h3>Fuego</h3>
-          <p>Un piquant plus intense pour les amateurs de sensations et de caractère.</p>
-        </article>
-
-        <article class="spice-card">
-          <span class="spice-level">Niveau 04</span>
-          <div class="spice-icon">🔥🌶️</div>
-          <h3>Diablo</h3>
-          <p>Une expérience relevée et audacieuse, réservée aux palais habitués au piment.</p>
-        </article>
+        <article class="spice"><div class="number">1</div><h3>Tranquilo</h3><p>Des saveurs douces et équilibrées, adaptées à la découverte de l’univers Mexi’Fuego.</p></article>
+        <article class="spice"><div class="number">2</div><h3>Caliente</h3><p>Une touche de piment qui relève les saveurs sans masquer les ingrédients.</p></article>
+        <article class="spice"><div class="number">3</div><h3>Fuego</h3><p>Une intensité plus marquée, destinée aux amateurs de plats relevés.</p></article>
+        <article class="spice"><div class="number">4</div><h3>Diablo</h3><p>Une intensité très élevée, réservée aux personnes habituées aux piments forts.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- INNOVATION -->
-  <section class="section innovation-section" id="innovation">
-    <div class="container innovation-grid">
-      <div class="innovation-visual">
-        <img
-          src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=85"
-          alt="Préparation de nourriture avec des ingrédients frais"
-          loading="lazy">
-        <div class="innovation-sticker">MANGE TA<br>BARQUETTE ! 🌽</div>
-      </div>
-
-      <div class="innovation-copy">
-        <span class="kicker">Notre innovation</span>
-        <h2>Et si ton emballage faisait aussi partie du <em>repas ?</em></h2>
-
-        <p>
-          Chez Mexi'Fuego, on veut aller plus loin que la street food.
-          Notre idée : développer des barquettes comestibles à partir de
-          matières alimentaires valorisées, notamment le maïs et le piment.
-        </p>
-
-        <p>
-          Le principe ? Explorer comment certains restes ou coproduits
-          issus de la préparation des aliments pourraient être transformés
-          en un contenant original, que l'on pourrait manger après son repas.
-        </p>
-
-        <div class="innovation-points">
-          <div class="innovation-point">
-            <div class="innovation-point-icon">🌽</div>
-            <div>
-              <strong>Donner une seconde vie</strong>
-              <p>Valoriser des matières alimentaires plutôt que de les écarter.</p>
-            </div>
-          </div>
-
-          <div class="innovation-point">
-            <div class="innovation-point-icon">♻️</div>
-            <div>
-              <strong>Réinventer le contenant</strong>
-              <p>Imaginer une alternative comestible aux barquettes classiques.</p>
-            </div>
-          </div>
-
-          <div class="innovation-point">
-            <div class="innovation-point-icon">🌶️</div>
-            <div>
-              <strong>Garder notre identité</strong>
-              <p>Le maïs, le piment et l'audace au cœur d'une innovation Mexi'Fuego.</p>
-            </div>
-          </div>
-        </div>
-
-        <span class="pill">INNOVATION · GOURMANDISE · CRÉATIVITÉ</span>
-
-        <div class="note">
-          Notre concept est en développement : la recette, la sécurité
-          alimentaire, la résistance à l'humidité et à la chaleur ainsi
-          que la faisabilité de fabrication devront être validées avant
-          toute commercialisation.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FUEGO CHALLENGE -->
-  <section class="section challenge-section" id="challenge">
-    <div class="container challenge-layout">
-      <div class="challenge-copy">
-        <span class="kicker">Le jeu commence maintenant</span>
-        <h2>Tourne la roue.<br><span>Joue avec le feu.</span></h2>
-        <p>
-          Le Fuego Challenge, c'est notre expérience signature.
-          Après ta commande, fais tourner la roue et découvre une question,
-          un défi ou une surprise. Tu connais tes classiques mexicains ?
-          Tu assumes ton niveau de fuego ?
-        </p>
-
-        <div class="challenge-rules">
-          <div class="challenge-rule">
-            <span class="rule-icon">🎡</span>
-            <div>
-              <strong>La roue décide</strong>
-              <p>Culture mexicaine, food, piment, défi ou bonus : le hasard choisit.</p>
-            </div>
-          </div>
-          <div class="challenge-rule">
-            <span class="rule-icon">🧠</span>
-            <div>
-              <strong>Bonne réponse ? Récompense !</strong>
-              <p>Une réduction ou une offre spéciale peut être à la clé.</p>
-            </div>
-          </div>
-          <div class="challenge-rule">
-            <span class="rule-icon">🔥</span>
-            <div>
-              <strong>Mauvaise réponse ? À toi de jouer !</strong>
-              <p>Relève un défi pimenté adapté au niveau de challenge.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="wheel-panel">
-        <span class="pill">🎯 FUEGO CHALLENGE</span>
-        <h3>Prêt à tenter ta chance ?</h3>
-        <p>Un clic. Une roue. Une surprise.</p>
-
-        <div class="wheel-wrap">
-          <div class="wheel-pointer"></div>
-          <div class="wheel" id="wheel" aria-label="Roue de la fortune du Fuego Challenge">
-            <span class="wheel-label">🌮 Culture</span>
-            <span class="wheel-label">🔥 Défi</span>
-            <span class="wheel-label">🌶️ Piment</span>
-            <span class="wheel-label">🎁 Bonus</span>
-            <span class="wheel-label">🇲🇽 Mexique</span>
-            <span class="wheel-label">💥 Diablo</span>
-            <span class="wheel-label">🧠 Food quiz</span>
-            <span class="wheel-label">✨ Surprise</span>
-          </div>
-          <div class="wheel-center">¡FUEGO!</div>
-        </div>
-
-        <button class="btn wheel-button" id="spinButton" type="button">
-          🎡 FAIRE TOURNER LA ROUE
-        </button>
-
-        <div class="wheel-result" id="wheelResult" aria-live="polite">
-          <span class="result-type" id="resultType">Ton résultat</span>
-          <h3 id="resultTitle"></h3>
-          <p id="resultText"></p>
-          <button class="btn btn-dark" id="againButton" type="button" style="margin-top:15px">
-            🔄 Rejouer
-          </button>
-        </div>
-
-        <p class="wheel-disclaimer">
-          Version démo : le résultat est simulé pour découvrir le concept.
-          Les récompenses réelles et les règles du jeu restent à définir.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section contact-section" id="contact">
+  <section class="section innovation" id="innovation">
     <div class="container">
-      <div class="section-heading">
-        <span class="kicker">On se retrouve bientôt ?</span>
-        <h2>Prêt à vivre ton <em>expérience Fuego ?</em></h2>
-        <p>
-          Une question, une idée ou une envie de nous retrouver lors d'un
-          événement ? Contacte-nous et suis les aventures Mexi'Fuego.
-        </p>
+      <div class="intro">
+        <div class="eyebrow">04 · Axe d’innovation</div>
+        <h2>Le développement de barquettes alimentaires comestibles</h2>
+        <p>Le projet vise à concevoir un contenant alimentaire qui puisse être mangé après le repas. Il s’inscrit dans l’identité mexicaine de la marque et dans une réflexion sur la réduction des emballages à usage unique et la valorisation potentielle de certaines matières végétales.</p>
       </div>
 
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>📍 Où nous trouver ?</h3>
-          <p><strong>Emplacements :</strong> à compléter</p>
-          <p><strong>Horaires :</strong> à compléter</p>
-          <p>Retrouve ici les dates de présence du food truck et nos prochains événements.</p>
-        </div>
+      <div class="banner">
+        <h3>Objectif du projet</h3>
+        <p>Développer une barquette suffisamment rigide pour contenir un repas de street-food, tout en restant comestible et compatible avec les caractéristiques des recettes servies. La formulation doit rechercher un équilibre entre tenue mécanique, résistance à l’humidité, texture, goût et facilité de consommation.</p>
+      </div>
 
-        <div class="contact-card">
-          <h3>📲 Restons connectés</h3>
-          <p>Nos plats, nos défis et nos prochaines dates : reste dans la boucle.</p>
-          <p><strong>Instagram :</strong> <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">ajouter votre compte</a></p>
-          <p><strong>E-mail :</strong> à compléter</p>
+      <div class="innovation-grid">
+        <article class="innovation-card">
+          <h3>Formulation proposée pour le prototype</h3>
+          <p>Le dossier prévoit une base de farines et d’amidons alimentaires, mélangés avec de l’eau, puis moulés et cuits ou séchés pour obtenir une structure rigide.</p>
+
+          <div class="formula">
+            <div><strong>50 g</strong><span>Farine de maïs<br>Goût et structure</span></div>
+            <div><strong>30 g</strong><span>Fécule de maïs<br>Cohésion</span></div>
+            <div><strong>20 g</strong><span>Amidon de tapioca<br>Texture</span></div>
+          </div>
+
+          <p class="small">Proportions pour 100 g de mélange sec, hors eau de préparation.</p>
+          <p>Le mélange pourrait être complété par du paprika fumé, de la poudre de poivron, des graines de tomate et des piments en poudre.</p>
+        </article>
+
+        <article class="innovation-card">
+          <h3>Caractéristiques recherchées</h3>
+          <ul>
+            <li>Un contenant comestible.</li>
+            <li>Une forme qui conserve sa stabilité pendant le repas.</li>
+            <li>Une résistance suffisante au poids, à la chaleur et à l’humidité des aliments.</li>
+            <li>Une saveur cohérente avec l’univers mexicain de la marque.</li>
+            <li>Une texture acceptable et une barquette agréable à manger.</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 style="margin-top:30px">Étapes de développement envisagées</h3>
+      <p style="color:#dce6d9;max-width:800px">Le processus suivant est une méthode de travail à expérimenter. Les paramètres techniques et les résultats devront être confirmés par des essais.</p>
+
+      <div class="process">
+        <article class="step"><b>01</b><h3>Identifier les matières</h3><p>Repérer et peser les matières végétales retenues, en notant leur origine, leur quantité et leur état.</p></article>
+        <article class="step"><b>02</b><h3>Sécher et réduire</h3><p>Sécher les matières adaptées avec un procédé contrôlé, puis les réduire en poudres homogènes.</p></article>
+        <article class="step"><b>03</b><h3>Formuler et mouler</h3><p>Mélanger les poudres avec la farine et les amidons, ajuster l’eau, homogénéiser puis former les barquettes.</p></article>
+        <article class="step"><b>04</b><h3>Cuire et tester</h3><p>Étudier les conditions de cuisson ou de séchage, puis tester la rigidité, les fissures, l’humidité et le goût.</p></article>
+      </div>
+
+      <div class="innovation-grid" style="margin-top:20px">
+        <article class="innovation-card">
+          <h3>Valorisation potentielle des coproduits</h3>
+          <p>Le dossier envisage l’incorporation de matières végétales issues de la préparation des recettes, par exemple des chutes de poivron ou de tomate, ainsi que des excédents de maïs. Seules des matières identifiées, saines, traçables et adaptées à un usage alimentaire pourraient être envisagées.</p>
+          <p>Les matières ayant été en contact avec les clients, les déchets de table et les matières altérées sont exclus du processus proposé.</p>
+        </article>
+
+        <article class="innovation-card">
+          <h3>Tests et points de vigilance</h3>
+          <ul>
+            <li>Vérifier la résistance au poids, à la chaleur et à l’humidité.</li>
+            <li>Évaluer la texture, le goût et la facilité de consommation.</li>
+            <li>Tester le contenant avec les recettes pendant toute la durée du repas.</li>
+            <li>Définir les conditions de fabrication, de séchage, de stockage et de conservation.</li>
+            <li>Vérifier les exigences d’hygiène et de sécurité alimentaire avant toute commercialisation.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="notice"><strong>État du projet :</strong> les barquettes comestibles constituent une piste d’innovation et de prototypage. Leur résistance, leur conservation, leur sécurité alimentaire et leur impact environnemental réel restent à démontrer par des essais. Le projet ne doit pas être présenté comme un produit déjà validé ou commercialisable.</div>
+    </div>
+  </section>
+
+  <section class="section" id="challenge">
+    <div class="container">
+      <div class="intro">
+        <div class="eyebrow">05 · Animation participative</div>
+        <h2>Le fonctionnement du Fuego Challenge</h2>
+        <p>Le Fuego Challenge est un dispositif d’animation associé à la commande. Le client fait tourner une roulette et découvre une question, un défi ou une récompense. Le principe associe découverte de la culture mexicaine, jeu et dégustation.</p>
+      </div>
+
+      <div class="challenge-grid">
+        <article class="card">
+          <h3>Déroulement de l’animation</h3>
+          <ol>
+            <li>Le client passe sa commande.</li>
+            <li>Il fait tourner la roulette du Fuego Challenge.</li>
+            <li>Il découvre la catégorie obtenue : question, défi, réduction ou surprise.</li>
+            <li>Selon le résultat, il répond à une question, participe à un défi ou reçoit une récompense prévue par l’organisation.</li>
+          </ol>
+          <p class="small">Les modalités exactes, les récompenses et les conditions de participation devront être définies avant le lancement.</p>
+        </article>
+
+        <div class="types">
+          <div class="type"><strong>Questions sur le Mexique</strong><span>Culture, traditions, géographie, musique et histoire.</span></div>
+          <div class="type"><strong>Questions gastronomiques</strong><span>Ingrédients, recettes et spécialités mexicaines.</span></div>
+          <div class="type"><strong>Questions sur les piments</strong><span>Variétés, caractéristiques et culture des piments.</span></div>
+          <div class="type"><strong>Défis de différents niveaux</strong><span>Gages doux, défis intermédiaires et défi Diablo, sur participation volontaire.</span></div>
+          <div class="type"><strong>Bonus de réduction</strong><span>Remise selon les règles définies par l’organisation.</span></div>
+          <div class="type"><strong>Surprise Mexi’Fuego</strong><span>Petit cadeau ou avantage prévu pour les participants.</span></div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="section menu-section" id="developpement">
+    <div class="container">
+      <div class="intro">
+        <div class="eyebrow">06 · Perspectives</div>
+        <h2>Les prochaines étapes du projet</h2>
+        <p>Le développement de Mexi’Fuego suppose de consolider l’offre de restauration et de tester les dispositifs qui différencient le concept.</p>
+      </div>
+
+      <div class="two">
+        <article class="card">
+          <h3>Développement de l’activité</h3>
+          <ul class="roadmap">
+            <li><strong>Stabiliser la carte</strong>Confirmer les recettes, les coûts, les prix et les niveaux de sauce.</li>
+            <li><strong>Définir les formats de présence</strong>Étudier les événements étudiants, festivals, marchés et manifestations sportives ou culturelles.</li>
+            <li><strong>Structurer l’animation</strong>Formaliser les règles, les questions, les défis et les récompenses du Fuego Challenge.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Développement de l’innovation</h3>
+          <ul class="roadmap">
+            <li><strong>Réaliser plusieurs formulations</strong>Comparer les proportions et les matières adaptées.</li>
+            <li><strong>Tester les propriétés du contenant</strong>Mesurer la rigidité, la tenue à l’humidité, la texture et le goût.</li>
+            <li><strong>Évaluer la faisabilité</strong>Examiner les contraintes d’hygiène, de production, de stockage, de coût et de fin de vie.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="eyebrow">07 · Informations</div>
+      <h2>Mexi’Fuego : restauration, animation et innovation</h2>
+      <p>Cette page présente les principaux éléments du concept : l’offre de street-food, la personnalisation du piquant, le Fuego Challenge et le projet de barquettes comestibles. Les coordonnées et informations pratiques seront ajoutées lorsque les canaux officiels seront définis.</p>
+      <a class="btn" href="#accueil">Retour en haut de page ↑</a>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <div class="container footer-row">
-    <a class="brand" href="#accueil">MEXI'<span class="brand-flame">FUEGO 🔥</span></a>
-    <p class="footer-slogan">Tu choisis. Tu goûtes. Tu brûles.</p>
-    <p>© 2026 Mexi'Fuego · Tous droits réservés.</p>
+  <div class="container foot">
+    <div><strong>Mexi’Fuego</strong> · Projet de street-food mexicaine</div>
+    <div>Site de présentation du concept · <a href="#innovation">Projet de barquettes comestibles</a></div>
   </div>
 </footer>
-
-<script>
-const wheel = document.getElementById('wheel');
-const spinButton = document.getElementById('spinButton');
-const againButton = document.getElementById('againButton');
-const resultBox = document.getElementById('wheelResult');
-const resultType = document.getElementById('resultType');
-const resultTitle = document.getElementById('resultTitle');
-const resultText = document.getElementById('resultText');
-
-const challenges = [
-  {
-    type: 'Question culture 🇲🇽',
-    title: 'Direction le Mexique !',
-    text: 'Question : quelle est la capitale du Mexique ? Réponse : Mexico. Dans le jeu réel, une bonne réponse peut donner accès à une récompense.'
-  },
-  {
-    type: 'Défi doux 😎',
-    title: 'Le défi du sourire',
-    text: 'Fais la meilleure présentation possible de ton plat comme si tu étais dans une publicité Mexi’Fuego.'
-  },
-  {
-    type: 'Question food 🌮',
-    title: 'Connais-tu tes classiques ?',
-    text: 'Question : quel ingrédient est la base du guacamole ? Réponse : l’avocat. À toi de jouer !'
-  },
-  {
-    type: 'Bonus 🎁',
-    title: 'Une surprise se prépare !',
-    text: 'La roue a désigné un bonus. Dans la version réelle, cette case pourra correspondre à une réduction ou une offre spéciale définie par Mexi’Fuego.'
-  },
-  {
-    type: 'Question piment 🌶️',
-    title: 'Petit quiz qui pique',
-    text: 'Question : le chipotle est un piment jalapeño mûr, séché et fumé. Vrai ou faux ? Réponse : vrai !'
-  },
-  {
-    type: 'Défi Fuego 🔥',
-    title: 'Vends-nous ton plat !',
-    text: 'En 10 secondes, donne envie à toute la table de goûter ton plat préféré de la carte Mexi’Fuego.'
-  },
-  {
-    type: 'Question Mexi’Fuego 🧠',
-    title: 'Le choix est à toi',
-    text: 'Quel est le niveau le plus intense de notre échelle Picante ? Réponse : Diablo !'
-  },
-  {
-    type: 'Surprise ✨',
-    title: 'La roue a parlé !',
-    text: 'Place à la convivialité : invente un slogan express pour Mexi’Fuego et fais rire ta table.'
-  }
-];
-
-let rotation = 0;
-let isSpinning = false;
-
-function spinWheel() {
-  if (isSpinning) return;
-
-  isSpinning = true;
-  spinButton.disabled = true;
-  resultBox.classList.remove('visible');
-
-  const selectedIndex = Math.floor(Math.random() * challenges.length);
-  const slice = 360 / challenges.length;
-
-  // Le pointeur est en haut de la roue. On centre le secteur choisi
-  // sous le pointeur après plusieurs tours complets.
-  const targetAngle = 360 - (selectedIndex * slice + slice / 2);
-  const current = rotation % 360;
-  const extra = (targetAngle - current + 360) % 360;
-
-  rotation += 360 * 5 + extra;
-  wheel.style.transform = `rotate(${rotation}deg)`;
-
-  setTimeout(() => {
-    const challenge = challenges[selectedIndex];
-
-    resultType.textContent = challenge.type;
-    resultTitle.textContent = challenge.title;
-    resultText.textContent = challenge.text;
-    resultBox.classList.add('visible');
-
-    isSpinning = false;
-    spinButton.disabled = false;
-  }, 4300);
-}
-
-spinButton.addEventListener('click', spinWheel);
-
-againButton.addEventListener('click', () => {
-  resultBox.classList.remove('visible');
-  spinWheel();
-});
-</script>
-
 </body>
 </html>
-```
