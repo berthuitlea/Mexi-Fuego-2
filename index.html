@@ -20,7 +20,6 @@
       --teal: #5DA399;
       --cream: #FFF9EF;
       --white: #FFFFFF;
-      --black: #171717;
     }
 
     * {
@@ -138,7 +137,7 @@
       display: flex;
       align-items: center;
       background:
-        linear-gradient(90deg, #17301ceF 0%, #17301cbb 55%, #17301c55 100%),
+        linear-gradient(90deg, #17301cef 0%, #17301cbb 55%, #17301c55 100%),
         url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1800&q=85') center/cover;
       color: var(--white);
     }
@@ -193,11 +192,6 @@
     .concept-text h3 {
       font-size: 1.7rem;
       margin-bottom: 15px;
-    }
-
-    .highlight {
-      color: var(--orange);
-      font-weight: 900;
     }
 
     /* POSITIONNEMENT */
@@ -334,7 +328,7 @@
       padding-top: 15px;
     }
 
-    /* Repère fixe au-dessus de la roue */
+    /* REPERE FIXE */
 
     .wheel-pointer {
       position: absolute;
@@ -350,7 +344,7 @@
       filter: drop-shadow(0 3px 3px #0008);
     }
 
-    /* Le cadre reste fixe pendant la rotation */
+    /* CADRE DE LA ROUE */
 
     .wheel-frame {
       position: relative;
@@ -363,7 +357,7 @@
       box-shadow: 0 10px 30px #0005;
     }
 
-    /* Seule l'image tourne */
+    /* IMAGE QUI TOURNE */
 
     .wheel-image {
       display: block;
@@ -397,7 +391,7 @@
       margin-bottom: 15px;
     }
 
-    .wheel-result .result-type {
+    .result-type {
       color: var(--orange);
       font-weight: 900;
       text-transform: uppercase;
@@ -462,7 +456,7 @@
       margin-bottom: 7px;
     }
 
-    /* INNOVATION */
+    /* INNOVATION : BARQUETTE */
 
     .innovation {
       background: var(--lime);
@@ -790,6 +784,7 @@
       </div>
 
       <div class="menu-grid">
+
         <article class="menu-card">
           <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=700&q=85" alt="Tacos">
           <div class="menu-content">
@@ -834,6 +829,7 @@
             <span class="price">10 €</span>
           </div>
         </article>
+
       </div>
     </div>
   </section>
@@ -849,6 +845,7 @@
       </div>
 
       <div class="piment-grid">
+
         <article class="piment-card">
           <div class="pepper">🌶️</div>
           <h3>Tranquilo</h3>
@@ -872,6 +869,7 @@
           <h3>Diablo</h3>
           <p>Le niveau le plus intense, réservé aux amateurs de piment.</p>
         </article>
+
       </div>
     </div>
   </section>
@@ -880,6 +878,7 @@
 
   <section class="section challenge" id="challenge">
     <div class="container">
+
       <div class="section-title">
         <p class="eyebrow">Animation interactive</p>
         <h2>Le <span>Fuego Challenge</span></h2>
@@ -907,7 +906,7 @@
 
             <div class="wheel-frame">
               <img
-                src="images/roue-fuego.png"
+                src="./Roue%20.png"
                 alt="Roue officielle du Fuego Challenge Mexi'Fuego"
                 class="wheel-image"
                 id="wheelImage"
@@ -922,6 +921,7 @@
         </div>
 
         <div class="wheel-result" aria-live="polite">
+
           <p class="result-type" id="resultType">LE RÉSULTAT DU TIRAGE</p>
 
           <h3 id="resultTitle">Prêt à relever le défi ?</h3>
@@ -949,8 +949,8 @@
           >
             Voir la réponse
           </button>
-        </div>
 
+        </div>
       </div>
 
       <div class="challenge-explanation">
@@ -1049,7 +1049,7 @@
         <div class="innovation-image-container">
           <img
             class="innovation-photo"
-            src="images/barquette-comestible.png"
+            src="./barquette%202.png"
             alt="Illustration d'une barquette comestible Mexi'Fuego garnie de nachos"
           >
         </div>
@@ -1178,6 +1178,7 @@
   <!-- JAVASCRIPT : ROUE INTERACTIVE -->
 
   <script>
+
     const wheelImage = document.getElementById("wheelImage");
     const spinButton = document.getElementById("spinButton");
     const answerButton = document.getElementById("answerButton");
@@ -1249,12 +1250,12 @@
     let currentRotation = 0;
     let isSpinning = false;
 
-    // Vérification du chargement de l'image de la roue
+    /* Vérifier que l'image de la roue existe */
 
     wheelImage.addEventListener("error", function () {
       resultTitle.textContent = "Image de la roue introuvable";
       resultDescription.textContent =
-        "Vérifie que le fichier images/roue-fuego.png est bien présent dans ton dépôt GitHub.";
+        "Vérifie le nom du fichier Roue .png dans ton dépôt GitHub.";
       spinButton.disabled = true;
     });
 
@@ -1262,15 +1263,16 @@
       spinButton.disabled = false;
     });
 
-    // Animation de rotation
+    /* Faire tourner la roue */
 
     function spinWheel() {
+
       if (isSpinning) return;
 
       if (!wheelImage.complete || wheelImage.naturalWidth === 0) {
         resultTitle.textContent = "Roue indisponible";
         resultDescription.textContent =
-          "Ajoute le fichier images/roue-fuego.png dans ton dépôt GitHub.";
+          "Vérifie que le fichier Roue .png est bien présent à la racine du dépôt.";
         return;
       }
 
@@ -1286,8 +1288,8 @@
       const selectedIndex = Math.floor(Math.random() * challenges.length);
       currentChallenge = challenges[selectedIndex];
 
-      // Plusieurs tours complets pour rendre l'animation visible.
-      // La roue tourne librement puis s'arrête progressivement.
+      // Six tours complets minimum et un angle final aléatoire.
+      // L'image entière tourne pendant six secondes.
 
       const fullTurns = 360 * 6;
       const randomEndAngle = Math.floor(Math.random() * 360);
@@ -1304,7 +1306,7 @@
       }, 6100);
     }
 
-    // Affichage du résultat
+    /* Afficher le résultat */
 
     function showResult() {
       resultType.textContent = currentChallenge.type;
@@ -1314,9 +1316,10 @@
       answerButton.hidden = false;
     }
 
-    // Affichage de la réponse
+    /* Afficher la réponse */
 
     function showAnswer() {
+
       if (!currentChallenge) return;
 
       resultDescription.textContent =
@@ -1324,6 +1327,7 @@
 
       answerButton.hidden = true;
     }
+
   </script>
 
 </body>
