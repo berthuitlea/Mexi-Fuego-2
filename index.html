@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Présentation du projet Mexi'Fuego, food truck inspiré de la street-food mexicaine.">
   <title>Mexi'Fuego — Présentation du projet</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +40,7 @@
     h1, h2, h3 {
       font-family: 'Contrail One', sans-serif;
       font-weight: normal;
-      line-height: 1.15;
+      line-height: 1.2;
     }
 
     h2 {
@@ -58,7 +59,7 @@
 
     .section {
       padding: 85px 0;
-      scroll-margin-top: 75px;
+      scroll-margin-top: 85px;
     }
 
     .section-title {
@@ -112,14 +113,16 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--cream);
       text-decoration: none;
-      font-size: .85rem;
+      font-size: .83rem;
       font-weight: 800;
       transition: color .2s;
     }
@@ -157,7 +160,7 @@
     .hero p {
       max-width: 620px;
       font-size: 1.1rem;
-      color: #fff;
+      color: white;
     }
 
     .hero-label {
@@ -246,6 +249,7 @@
       width: 100%;
       height: 190px;
       object-fit: cover;
+      display: block;
     }
 
     .menu-content {
@@ -263,7 +267,7 @@
       font-size: 1.2rem;
     }
 
-    /* UNIVERS DU PIMENT */
+    /* PIMENT */
 
     .piment {
       background: var(--lime);
@@ -311,7 +315,7 @@
     .challenge-intro {
       max-width: 760px;
       text-align: center;
-      margin: 0 auto 35px;
+      margin: 0 auto 40px;
     }
 
     .wheel-layout {
@@ -327,26 +331,31 @@
       position: relative;
       width: min(100%, 420px);
       margin: auto;
-      padding-top: 12px;
+      padding-top: 15px;
     }
+
+    /* Repère fixe au-dessus de la roue */
 
     .wheel-pointer {
       position: absolute;
-      z-index: 3;
+      z-index: 5;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
       width: 0;
       height: 0;
-      border-left: 19px solid transparent;
-      border-right: 19px solid transparent;
-      border-top: 34px solid var(--orange);
-      filter: drop-shadow(0 2px 2px #0008);
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 35px solid var(--orange);
+      filter: drop-shadow(0 3px 3px #0008);
     }
 
+    /* Le cadre reste fixe pendant la rotation */
+
     .wheel-frame {
+      position: relative;
       width: 100%;
-      aspect-ratio: 1;
+      aspect-ratio: 1 / 1;
       overflow: hidden;
       border-radius: 50%;
       background: var(--cream);
@@ -354,20 +363,17 @@
       box-shadow: 0 10px 30px #0005;
     }
 
+    /* Seule l'image tourne */
+
     .wheel-image {
+      display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      display: block;
+      object-fit: contain;
       border-radius: 50%;
-      /*
-        L'image fournie contient déjà une flèche en haut.
-        On masque cette flèche intégrée pour garder
-        uniquement la roue, puis on ajoute une flèche fixe.
-      */
-      clip-path: circle(47% at 50% 50%);
       transform: rotate(0deg);
-      transition: transform 5s cubic-bezier(.12,.72,.12,1);
+      transition: transform 6s cubic-bezier(.12,.72,.12,1);
+      will-change: transform;
     }
 
     .wheel-instructions {
@@ -470,11 +476,14 @@
     }
 
     .innovation-photo {
+      display: block;
       width: 100%;
-      min-height: 340px;
+      height: 370px;
       object-fit: cover;
+      object-position: center;
       border-radius: 18px;
-      background: white;
+      background: var(--cream);
+      box-shadow: 0 8px 24px #17301c20;
     }
 
     .innovation-text h3 {
@@ -595,16 +604,6 @@
     /* RESPONSIVE */
 
     @media (max-width: 850px) {
-      .nav-links {
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-
-      .nav-links a {
-        font-size: .75rem;
-      }
-
       .concept-grid,
       .wheel-layout,
       .innovation-grid {
@@ -636,6 +635,11 @@
 
       .nav-links {
         justify-content: center;
+        gap: 10px;
+      }
+
+      .nav-links a {
+        font-size: .75rem;
       }
 
       .positionnement-grid,
@@ -654,6 +658,14 @@
       .hero {
         min-height: 480px;
       }
+
+      .wheel-result {
+        padding: 22px;
+      }
+
+      .innovation-photo {
+        height: 280px;
+      }
     }
   </style>
 </head>
@@ -661,6 +673,7 @@
 <body>
 
   <!-- NAVIGATION -->
+
   <header>
     <nav class="container">
       <a href="#accueil" class="brand">MEXI<span>'</span>FUEGO</a>
@@ -679,6 +692,7 @@
   </header>
 
   <!-- ACCUEIL -->
+
   <section class="hero" id="accueil">
     <div class="container hero-content">
       <span class="hero-label">Présentation du projet</span>
@@ -692,6 +706,7 @@
   </section>
 
   <!-- CONCEPT -->
+
   <section class="section" id="concept">
     <div class="container">
       <div class="section-title">
@@ -725,6 +740,7 @@
   </section>
 
   <!-- POSITIONNEMENT -->
+
   <section class="section positionnement" id="positionnement">
     <div class="container">
       <div class="section-title">
@@ -764,6 +780,7 @@
   </section>
 
   <!-- CARTE -->
+
   <section class="section" id="carte">
     <div class="container">
       <div class="section-title">
@@ -822,6 +839,7 @@
   </section>
 
   <!-- PIMENT -->
+
   <section class="section piment" id="piment">
     <div class="container">
       <div class="section-title">
@@ -859,6 +877,7 @@
   </section>
 
   <!-- FUEGO CHALLENGE -->
+
   <section class="section challenge" id="challenge">
     <div class="container">
       <div class="section-title">
@@ -883,6 +902,7 @@
 
         <div>
           <div class="wheel-area">
+
             <div class="wheel-pointer"></div>
 
             <div class="wheel-frame">
@@ -893,6 +913,7 @@
                 id="wheelImage"
               >
             </div>
+
           </div>
 
           <p class="wheel-instructions">
@@ -901,20 +922,28 @@
         </div>
 
         <div class="wheel-result" aria-live="polite">
-          <p class="result-type">Le résultat du tirage</p>
+          <p class="result-type" id="resultType">LE RÉSULTAT DU TIRAGE</p>
+
           <h3 id="resultTitle">Prêt à relever le défi ?</h3>
+
           <p id="resultDescription">
             Lancez la roue pour découvrir votre question,
             votre défi ou votre surprise.
           </p>
 
-          <button class="wheel-button" id="spinButton" onclick="spinWheel()">
+          <button
+            class="wheel-button"
+            id="spinButton"
+            type="button"
+            onclick="spinWheel()"
+          >
             Faire tourner la roue
           </button>
 
           <button
             class="wheel-button answer-button"
             id="answerButton"
+            type="button"
             onclick="showAnswer()"
             hidden
           >
@@ -925,6 +954,7 @@
       </div>
 
       <div class="challenge-explanation">
+
         <div class="challenge-item">
           <strong>Question culture</strong>
           <p>Découverte du Mexique, de ses traditions, de sa géographie et de son histoire.</p>
@@ -964,19 +994,23 @@
           <strong>Surprise Mexi'Fuego</strong>
           <p>Une surprise mystère réservée au participant.</p>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- INNOVATION -->
+
   <section class="section innovation" id="innovation">
     <div class="container">
+
       <div class="section-title">
         <p class="eyebrow">Développement du concept</p>
         <h2>L'innovation : les <span>barquettes comestibles</span></h2>
       </div>
 
       <div class="innovation-grid">
+
         <div class="innovation-text">
           <h3>Un contenant qui se mange !</h3>
 
@@ -1012,26 +1046,30 @@
           </p>
         </div>
 
-        <div>
+        <div class="innovation-image-container">
           <img
             class="innovation-photo"
             src="images/barquette-comestible.png"
-            alt="Exemple illustratif d'une barquette comestible garnie de nachos"
+            alt="Illustration d'une barquette comestible Mexi'Fuego garnie de nachos"
           >
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ANIMATIONS -->
+
   <section class="section animations" id="animations">
     <div class="container">
+
       <div class="section-title">
         <p class="eyebrow">Au-delà du repas</p>
         <h2>Les <span>animations</span></h2>
       </div>
 
       <div class="animation-grid">
+
         <article class="animation-card">
           <h3>Fuego Challenge</h3>
           <p>
@@ -1055,13 +1093,16 @@
             différentes intensités et créer des moments conviviaux.
           </p>
         </article>
+
       </div>
     </div>
   </section>
 
   <!-- PUBLIC -->
+
   <section class="section public" id="public">
     <div class="container">
+
       <div class="section-title">
         <p class="eyebrow">La cible</p>
         <h2>Le <span>public visé</span></h2>
@@ -1081,18 +1122,22 @@
           souhaitant découvrir de nouvelles saveurs.
         </p>
       </div>
+
     </div>
   </section>
 
   <!-- DEVELOPPEMENT -->
+
   <section class="section development" id="developpement">
     <div class="container">
+
       <div class="section-title">
         <p class="eyebrow">Perspectives</p>
         <h2>Le <span>développement du projet</span></h2>
       </div>
 
       <div class="development-grid">
+
         <article class="development-card">
           <h3>Développement de l'offre</h3>
           <p>
@@ -1117,76 +1162,83 @@
             dans l'activité du food truck.
           </p>
         </article>
+
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
+
   <footer>
     <strong>MEXI'FUEGO</strong>
     <p>Projet de food truck inspiré de la street-food mexicaine.</p>
     <p>Présentation du concept et de ses innovations.</p>
   </footer>
 
-  <!-- INTERACTIVITE DE LA ROUE -->
+  <!-- JAVASCRIPT : ROUE INTERACTIVE -->
+
   <script>
     const wheelImage = document.getElementById("wheelImage");
     const spinButton = document.getElementById("spinButton");
     const answerButton = document.getElementById("answerButton");
 
+    const resultTitle = document.getElementById("resultTitle");
+    const resultDescription = document.getElementById("resultDescription");
+    const resultType = document.getElementById("resultType");
+
     const challenges = [
       {
         title: "Question culture",
-        type: "QUESTION",
+        type: "QUESTION CULTURE",
         description: "Quel est le nom de la capitale du Mexique ?",
-        answer: "Mexico (Mexico City).",
-        explanation: "La capitale du Mexique est Mexico, également appelée Ciudad de México."
+        answer: "Mexico, également appelée Ciudad de México.",
+        explanation: "C'est la capitale du Mexique."
       },
       {
         title: "Question food",
-        type: "QUESTION",
+        type: "QUESTION FOOD",
         description: "Quel ingrédient est à la base de nombreuses tortillas mexicaines traditionnelles ?",
         answer: "Le maïs.",
-        explanation: "Le maïs est un ingrédient central de nombreuses préparations traditionnelles mexicaines."
+        explanation: "Il est un ingrédient central de nombreuses préparations traditionnelles mexicaines."
       },
       {
         title: "Question piment",
-        type: "QUESTION",
+        type: "QUESTION PIMENT",
         description: "Comment appelle-t-on le piment jalapeño lorsqu'il est fumé et séché ?",
         answer: "Le chipotle.",
         explanation: "Le chipotle est un jalapeño mûr qui a été fumé puis séché."
       },
       {
         title: "Défi doux",
-        type: "DÉFI",
+        type: "DÉFI DOUX",
         description: "Présente ton plat comme si tu étais un vendeur de street-food au Mexique !",
         answer: "Défi réussi si tu joues le jeu !",
         explanation: "L'objectif est de participer et de s'amuser."
       },
       {
         title: "Défi medium",
-        type: "DÉFI",
+        type: "DÉFI MEDIUM",
         description: "Fais deviner un ingrédient mexicain à la personne qui t'accompagne, sans prononcer son nom.",
         answer: "À toi de faire deviner l'ingrédient !",
         explanation: "Un défi à réaliser à table avec ton entourage."
       },
       {
         title: "Défi Diablo",
-        type: "DÉFI",
+        type: "DÉFI DIABLO",
         description: "Relève le défi épicé proposé par l'équipe Mexi'Fuego !",
         answer: "Défi à réaliser uniquement si tu le souhaites.",
         explanation: "Le participant doit toujours pouvoir choisir de ne pas consommer un produit pimenté."
       },
       {
         title: "Bonus réduction",
-        type: "BONUS",
+        type: "BONUS RÉDUCTION",
         description: "Félicitations ! Tu remportes un bonus réduction.",
         answer: "Présente ce résultat à l'équipe.",
         explanation: "La réduction est appliquée selon les conditions définies par l'équipe."
       },
       {
         title: "Surprise Mexi'Fuego",
-        type: "SURPRISE",
+        type: "SURPRISE MEXI'FUEGO",
         description: "Une surprise t'attend !",
         answer: "Rends-toi auprès de l'équipe Mexi'Fuego.",
         explanation: "L'équipe te dévoilera ta surprise."
@@ -1197,62 +1249,77 @@
     let currentRotation = 0;
     let isSpinning = false;
 
+    // Vérification du chargement de l'image de la roue
+
+    wheelImage.addEventListener("error", function () {
+      resultTitle.textContent = "Image de la roue introuvable";
+      resultDescription.textContent =
+        "Vérifie que le fichier images/roue-fuego.png est bien présent dans ton dépôt GitHub.";
+      spinButton.disabled = true;
+    });
+
+    wheelImage.addEventListener("load", function () {
+      spinButton.disabled = false;
+    });
+
+    // Animation de rotation
+
     function spinWheel() {
       if (isSpinning) return;
+
+      if (!wheelImage.complete || wheelImage.naturalWidth === 0) {
+        resultTitle.textContent = "Roue indisponible";
+        resultDescription.textContent =
+          "Ajoute le fichier images/roue-fuego.png dans ton dépôt GitHub.";
+        return;
+      }
 
       isSpinning = true;
       spinButton.disabled = true;
       answerButton.hidden = true;
 
-      document.getElementById("resultTitle").textContent = "La roue tourne...";
-      document.getElementById("resultDescription").textContent =
+      resultType.textContent = "TIRAGE EN COURS";
+      resultTitle.textContent = "La roue tourne...";
+      resultDescription.textContent =
         "Le Fuego Challenge va bientôt révéler ton résultat !";
 
       const selectedIndex = Math.floor(Math.random() * challenges.length);
       currentChallenge = challenges[selectedIndex];
 
-      /*
-        Les 8 cases sont disposées dans le sens horaire.
-        Le centre de chaque case se trouve à environ 45° d'écart.
-        On fait tourner l'image pour aligner la case choisie
-        avec le repère situé en haut de la roue.
-      */
-      const segmentAngle = 45;
-      const targetAngle = -selectedIndex * segmentAngle;
+      // Plusieurs tours complets pour rendre l'animation visible.
+      // La roue tourne librement puis s'arrête progressivement.
+
       const fullTurns = 360 * 6;
+      const randomEndAngle = Math.floor(Math.random() * 360);
 
-      const normalizedCurrent = ((currentRotation % 360) + 360) % 360;
-      const normalizedTarget = ((targetAngle % 360) + 360) % 360;
-      const extraAngle =
-        (normalizedTarget - normalizedCurrent + 360) % 360;
+      currentRotation += fullTurns + randomEndAngle;
 
-      currentRotation += fullTurns + extraAngle;
-      wheelImage.style.transform = `rotate(${currentRotation}deg)`;
+      wheelImage.style.transform =
+        `rotate(${currentRotation}deg)`;
 
-      setTimeout(() => {
+      setTimeout(function () {
         showResult();
         isSpinning = false;
         spinButton.disabled = false;
-      }, 5100);
+      }, 6100);
     }
 
+    // Affichage du résultat
+
     function showResult() {
-      document.getElementById("resultTitle").textContent =
-        currentChallenge.title;
-
-      document.getElementById("resultDescription").textContent =
-        currentChallenge.description;
-
-      document.querySelector(".result-type").textContent =
-        currentChallenge.type;
+      resultType.textContent = currentChallenge.type;
+      resultTitle.textContent = currentChallenge.title;
+      resultDescription.textContent = currentChallenge.description;
 
       answerButton.hidden = false;
     }
 
+    // Affichage de la réponse
+
     function showAnswer() {
       if (!currentChallenge) return;
 
-      document.getElementById("resultDescription").textContent =
+      resultDescription.textContent =
         currentChallenge.answer + " " + currentChallenge.explanation;
 
       answerButton.hidden = true;
